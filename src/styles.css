@@ -193,4 +193,60 @@
   }
 }
 
+/* Print mode for Digital PDF (2 pages, credit card size) */
+@media print {
+  body.print-mode-digital-pdf .screen-layout {
+    display: none !important;
+  }
+  
+  body.print-mode-digital-pdf .digital-pdf-print-container {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+  }
+  
+  body.print-mode-digital-pdf .digital-pdf-page {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    page-break-after: always !important;
+    break-after: page !important;
+    background-color: white !important;
+  }
+  
+  body.print-mode-digital-pdf .digital-pdf-page:last-child {
+    page-break-after: avoid !important;
+    break-after: avoid !important;
+  }
+  
+  body.print-mode-digital-pdf .digital-pdf-card-wrapper {
+    width: 53.98mm !important;
+    height: 85.60mm !important;
+    position: relative !important;
+    overflow: hidden !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 3.18mm !important;
+    box-shadow: none !important;
+    background: transparent !important;
+  }
+  
+  body.print-mode-digital-pdf .digital-pdf-card-content {
+    width: 380px !important;
+    height: 600px !important;
+    transform: scale(0.537) !important;
+    transform-origin: center center !important;
+    flex-shrink: 0 !important;
+    box-shadow: none !important;
+  }
+}
+
+.digital-pdf-print-container {
+  display: none;
+}
+
 

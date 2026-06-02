@@ -43,6 +43,23 @@ function ViewMembershipCard() {
     }
   };
 
+  const handlePrintDigitalPdf = () => {
+    if (typeof window !== "undefined") {
+      document.body.classList.add("print-mode-digital-pdf");
+      
+      const cleanUp = () => {
+        document.body.classList.remove("print-mode-digital-pdf");
+        window.removeEventListener("afterprint", cleanUp);
+      };
+      
+      window.addEventListener("afterprint", cleanUp);
+      
+      setTimeout(() => {
+        window.print();
+      }, 100);
+    }
+  };
+
   const handleShare = () => {
     if (typeof navigator !== "undefined" && navigator.share && member) {
       navigator
@@ -98,89 +115,112 @@ function ViewMembershipCard() {
   }
 
   return (
-    <div className="min-h-screen bg-background flex flex-col justify-between print:bg-white print:min-h-0">
-      <div className="print:hidden">
-        <Header />
-      </div>
-
-      <main className="flex-grow pt-28 pb-16 px-6 print:p-0 print:pt-4">
-        <div className="mx-auto max-w-4xl flex flex-col items-center">
-          {/* Top navigation - hide on print */}
-          <div className="w-full flex justify-between items-center mb-8 print:hidden max-w-3xl">
-            <Link
-              to="/membros"
-              className="inline-flex items-center gap-2 text-xs uppercase tracking-wider text-muted-foreground hover:text-gold transition-colors"
-            >
-              <ArrowLeft className="w-4 h-4" /> Todos os Membros
-            </Link>
-
-            <Link
-              to="/membros/carteirinha/validar"
-              search={{ id: member.id }}
-              className="inline-flex items-center gap-2 text-xs uppercase tracking-wider text-gold hover:text-gold/80 transition-colors"
-            >
-              <ShieldCheck className="w-4 h-4" /> Validar Carteirinha
-            </Link>
-          </div>
-
-          {/* Tab Switcher - hide on print */}
-          <div className="flex bg-secondary border border-border p-1 rounded-xl mb-8 w-full max-w-[380px] print:hidden animate-fade-up">
-            <button
-              onClick={() => setViewMode("digital")}
-              className={`flex-1 py-2 text-xs font-semibold rounded-lg transition-all cursor-pointer ${
-                viewMode === "digital"
-                  ? "bg-card text-primary shadow-sm border border-border"
-                  : "text-muted-foreground hover:text-primary"
-              }`}
-            >
-              Versão Digital (Vertical)
-            </button>
-            <button
-              onClick={() => setViewMode("print")}
-              className={`flex-1 py-2 text-xs font-semibold rounded-lg transition-all cursor-pointer ${
-                viewMode === "print"
-                  ? "bg-card text-primary shadow-sm border border-border"
-                  : "text-muted-foreground hover:text-primary"
-              }`}
-            >
-              Versão Impressa (Horizontal)
-            </button>
-          </div>
-
-          {/* Interactive membership card wrapper */}
-          <div className="flex justify-center w-full mb-8 animate-fade-up print:m-0">
-            <MembershipCard member={member} viewMode={viewMode} />
-          </div>
-
-          {/* Actions Bar - hide on print */}
-          <div
-            className="flex flex-wrap gap-3 justify-center w-full max-w-[380px] animate-fade-up print:hidden"
-            style={{ animationDelay: "0.1s" }}
-          >
-            <Button
-              onClick={handlePrint}
-              variant="outline"
-              className="border-gold/30 hover:bg-gold/5 text-primary h-11 px-5 text-xs font-semibold flex-1"
-            >
-              <Printer className="w-4 h-4 mr-2 text-gold" />
-              Imprimir / PDF
-            </Button>
-
-            <Button
-              onClick={handleShare}
-              variant="outline"
-              className="border-border text-muted-foreground hover:bg-secondary h-11 px-5 text-xs font-semibold flex-1"
-            >
-              <Share2 className="w-4 h-4 mr-2" />
-              Compartilhar Link
-            </Button>
-          </div>
+    <>
+      <div className="screen-layout min-h-screen bg-background flex flex-col justify-between print:bg-white print:min-h-0">
+        <div className="print:hidden">
+          <Header />
         </div>
-      </main>
 
-      <div className="print:hidden">
-        <Footer />
+        <main className="flex-grow pt-28 pb-16 px-6 print:p-0 print:pt-4">
+          <div className="mx-auto max-w-4xl flex flex-col items-center">
+            {/* Top navigation - hide on print */}
+            <div className="w-full flex justify-between items-center mb-8 print:hidden max-w-3xl">
+              <Link
+                to="/membros"
+                className="inline-flex items-center gap-2 text-xs uppercase tracking-wider text-muted-foreground hover:text-gold transition-colors"
+              >
+                <ArrowLeft className="w-4 h-4" /> Todos os Membros
+              </Link>
+
+              <Link
+                to="/membros/carteirinha/validar"
+                search={{ id: member.id }}
+                className="inline-flex items-center gap-2 text-xs uppercase tracking-wider text-gold hover:text-gold/80 transition-colors"
+              >
+                <ShieldCheck className="w-4 h-4" /> Validar Carteirinha
+              </Link>
+            </div>
+
+            {/* Tab Switcher - hide on print */}
+            <div className="flex bg-secondary border border-border p-1 rounded-xl mb-8 w-full max-w-[380px] print:hidden animate-fade-up">
+              <button
+                onClick={() => setViewMode("digital")}
+                className={`flex-1 py-2 text-xs font-semibold rounded-lg transition-all cursor-pointer ${
+                  viewMode === "digital"
+                    ? "bg-card text-primary shadow-sm border border-border"
+                    : "text-muted-foreground hover:text-primary"
+                }`}
+              >
+                Versão Digital (Vertical)
+              </button>
+              <button
+                onClick={() => setViewMode("print")}
+                className={`flex-1 py-2 text-xs font-semibold rounded-lg transition-all cursor-pointer ${
+                  viewMode === "print"
+                    ? "bg-card text-primary shadow-sm border border-border"
+                    : "text-muted-foreground hover:text-primary"
+                }`}
+              >
+                Versão Impressa (Horizontal)
+              </button>
+            </div>
+
+            {/* Interactive membership card wrapper */}
+            <div className="flex justify-center w-full mb-8 animate-fade-up print:m-0">
+              <MembershipCard member={member} viewMode={viewMode} />
+            </div>
+
+            {/* Actions Bar - hide on print */}
+            <div
+              className="flex flex-col gap-2 items-center w-full max-w-[380px] print:hidden"
+            >
+              <div
+                className="flex gap-3 justify-center w-full animate-fade-up"
+                style={{ animationDelay: "0.1s" }}
+              >
+                {viewMode === "digital" ? (
+                  <Button
+                    onClick={handlePrintDigitalPdf}
+                    className="bg-gold-gradient text-primary hover:opacity-90 shadow-gold h-11 px-5 text-xs font-semibold flex-1 cursor-pointer"
+                  >
+                    <Printer className="w-4 h-4 mr-2" />
+                    Baixar PDF (Digital)
+                  </Button>
+                ) : (
+                  <Button
+                    onClick={handlePrint}
+                    className="bg-gold-gradient text-primary hover:opacity-90 shadow-gold h-11 px-5 text-xs font-semibold flex-1 cursor-pointer"
+                  >
+                    <Printer className="w-4 h-4 mr-2" />
+                    Baixar PDF (Impressa)
+                  </Button>
+                )}
+
+                <Button
+                  onClick={handleShare}
+                  variant="outline"
+                  className="border-border text-muted-foreground hover:bg-secondary h-11 px-5 text-xs font-semibold flex-1 cursor-pointer"
+                >
+                  <Share2 className="w-4 h-4 mr-2" />
+                  Compartilhar Link
+                </Button>
+              </div>
+              <p className="text-[10px] text-muted-foreground text-center mt-2 italic animate-fade-up">
+                * Dica: Na janela de impressão, escolha a opção <strong>"Salvar como PDF"</strong> para baixar o arquivo.
+              </p>
+            </div>
+          </div>
+        </main>
+
+        <div className="print:hidden">
+          <Footer />
+        </div>
       </div>
-    </div>
+
+      {/* Hidden 2-page print container for vertical digital PDF */}
+      <div className="digital-pdf-print-container">
+        <MembershipCard member={member} viewMode="digital-pdf" />
+      </div>
+    </>
   );
 }
