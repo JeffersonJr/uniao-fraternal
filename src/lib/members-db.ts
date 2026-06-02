@@ -21,6 +21,83 @@ export const DEFAULT_MEMBERS: Member[] = [
     photo: "https://arlsuniaofraternal.com.br/wp-content/uploads/2025/08/cropped-cropped-Jefferson-Campos-1-128x128.webp",
     status: "regular",
     joinedAt: "2020-08-09T00:00:00.000Z"
+  },
+  {
+    id: "gunther-patrick-vargas-hager",
+    name: "Gunther Patrick Vargas Hager",
+    role: "Mestre Instalado",
+    cim: "Não informada",
+    initiationDate: "Não informada",
+    email: "gunther@arlsuniaofraternal.com.br",
+    photo: "",
+    status: "regular",
+    joinedAt: new Date().toISOString()
+  },
+  {
+    id: "jose-aldeci-de-souza",
+    name: "Jose Aldeci de Souza",
+    role: "Mestre Maçom",
+    cim: "Não informada",
+    initiationDate: "09 de Setembro de 2023",
+    email: "souza@arlsuniaofraternal.com.br",
+    photo: "",
+    status: "regular",
+    joinedAt: new Date("2023-09-09").toISOString()
+  },
+  {
+    id: "marcos-winicios",
+    name: "Marcos Winicios",
+    role: "Mestre Maçom",
+    cim: "Não informada",
+    initiationDate: "23 de Setembro de 2023",
+    email: "marcos@arlsuniaofraternal.com.br",
+    photo: "",
+    status: "regular",
+    joinedAt: new Date("2023-09-23").toISOString()
+  },
+  {
+    id: "mariano",
+    name: "Mariano",
+    role: "Mestre Maçom",
+    cim: "Não informada",
+    initiationDate: "Não informada",
+    email: "mariano@arlsuniaofraternal.com.br",
+    photo: "",
+    status: "regular",
+    joinedAt: new Date().toISOString()
+  },
+  {
+    id: "noris-eduardo",
+    name: "Noris Eduardo",
+    role: "Não informado",
+    cim: "Não informada",
+    initiationDate: "Não informada",
+    email: "noris@arlsuniaofraternal.com.br",
+    photo: "",
+    status: "regular",
+    joinedAt: new Date().toISOString()
+  },
+  {
+    id: "pimentel",
+    name: "Pimentel",
+    role: "Mestre Maçom",
+    cim: "Não informada",
+    initiationDate: "10 de Julho de 2021",
+    email: "pimentel@arlsuniaofraternal.com.br",
+    photo: "",
+    status: "regular",
+    joinedAt: new Date("2021-07-10").toISOString()
+  },
+  {
+    id: "raffael-leite",
+    name: "Raffael Leite",
+    role: "Mestre Maçom",
+    cim: "Não informada",
+    initiationDate: "Não informada",
+    email: "raffael@arlsuniaofraternal.com.br",
+    photo: "",
+    status: "regular",
+    joinedAt: new Date().toISOString()
   }
 ];
 
