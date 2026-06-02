@@ -54,7 +54,7 @@ function ValidateCardPage() {
         }
       } else {
         setSearchId(text);
-        let found = getMemberById(text);
+        let found: Member | null = getMemberById(text) || null;
         if (!found) {
           const all = getMembers();
           found = all.find((m) => m.cim === text) || null;
@@ -64,7 +64,7 @@ function ValidateCardPage() {
       }
     } catch (err) {
       setSearchId(text);
-      let found = getMemberById(text);
+      let found: Member | null = getMemberById(text) || null;
       if (!found) {
         const all = getMembers();
         found = all.find((m) => m.cim === text) || null;
@@ -156,7 +156,7 @@ function ValidateCardPage() {
 
     setLoading(true);
     // Search first by ID
-    let found = getMemberById(searchId.trim());
+    let found: Member | null = getMemberById(searchId.trim()) || null;
     
     // If not found, try searching by CIM number
     if (!found) {
@@ -164,7 +164,7 @@ function ValidateCardPage() {
       found = all.find((m) => m.cim === searchId.trim()) || null;
     }
 
-    setMember(found || null);
+    setMember(found);
     setSearched(true);
     setLoading(false);
     setValidationTime(
