@@ -159,3 +159,38 @@
   transform: rotateY(180deg);
 }
 
+@utility phone-mockup-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  overflow: visible;
+}
+
+@utility phone-mockup-scale {
+  transform-origin: center top;
+  transition: transform 0.3s ease;
+}
+
+@media (max-width: 480px) {
+  .phone-mockup-scale {
+    transform: scale(0.88);
+    margin-bottom: -90px;
+  }
+}
+
+@media (max-width: 420px) {
+  .phone-mockup-scale {
+    transform: scale(0.8);
+    margin-bottom: -150px;
+  }
+}
+
+@media (max-width: 370px) {
+  .phone-mockup-scale {
+    transform: scale(0.7);
+    margin-bottom: -220px;
+  }
+}
+
+
