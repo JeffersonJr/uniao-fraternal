@@ -145,7 +145,7 @@ function MembersPortal() {
                       variant="outline"
                       className="flex-grow border-gold/30 hover:bg-gold/5 text-primary h-10 text-xs font-semibold"
                     >
-                      <Link to={`/membros/carteirinha/${member.id}`}>
+                      <Link to="/membros/carteirinha/$id" params={{ id: member.id }}>
                         <CreditCard className="w-3.5 h-3.5 mr-2 text-gold" />
                         Ver Carteirinha
                       </Link>
