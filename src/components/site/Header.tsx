@@ -34,12 +34,13 @@ export function Header() {
           </div>
         </Link>
         <nav className="hidden md:flex items-center gap-8 text-sm text-primary-foreground/80">
-          <a href="#sobre" className="hover:text-gold transition-colors">Sobre</a>
-          <a href="#maconaria" className="hover:text-gold transition-colors">Maçonaria</a>
-          <a href="#valores" className="hover:text-gold transition-colors">Valores</a>
-          <a href="#macons" className="hover:text-gold transition-colors">Maçons</a>
-          <a href="#faq" className="hover:text-gold transition-colors">FAQ</a>
-          <a href="#contato" className="hover:text-gold transition-colors">Contato</a>
+          <a href="/#sobre" className="hover:text-gold transition-colors">Sobre</a>
+          <a href="/#maconaria" className="hover:text-gold transition-colors">Maçonaria</a>
+          <a href="/#valores" className="hover:text-gold transition-colors">Valores</a>
+          <a href="/#macons" className="hover:text-gold transition-colors">Maçons</a>
+          <a href="/#faq" className="hover:text-gold transition-colors">FAQ</a>
+          <a href="/#contato" className="hover:text-gold transition-colors">Contato</a>
+          <Link to="/membros" className="hover:text-gold transition-colors font-medium">Membros</Link>
         </nav>
         <Button asChild variant="default" className="bg-gold-gradient text-primary hover:opacity-90 font-medium">
           <Link to="/triagem">Quero ser um Maçom</Link>
