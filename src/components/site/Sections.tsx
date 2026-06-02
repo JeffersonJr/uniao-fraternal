@@ -27,14 +27,19 @@ export function About() {
             nossa Loja foi estabelecida por uma comissão de Mestres Instalados Regulares com o compromisso de difundir
             os valores da Maçonaria pura e tradicional por todo o Brasil.
           </p>
-          <div className="flex items-center gap-4 p-4 bg-secondary border border-border rounded-xl">
-            <img src={gombLogoUrl} alt="Logo GOMB" className="h-16 w-16 object-contain" />
+          <a 
+            href="https://gomb.org.br/" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="flex items-center gap-4 p-4 bg-secondary border border-border rounded-xl hover:border-gold/45 hover:bg-secondary/70 transition-all group"
+          >
+            <img src={gombLogoUrl} alt="Logo GOMB" className="h-16 w-16 object-contain transition-transform group-hover:scale-105" />
             <div>
               <p className="text-[10px] uppercase tracking-[0.2em] text-gold font-bold">Filiada ao</p>
-              <h4 className="font-display text-base text-primary font-semibold leading-tight">Grande Oriente Maçônico do Brasil</h4>
+              <h4 className="font-display text-base text-primary font-semibold leading-tight group-hover:text-gold transition-colors">Grande Oriente Maçônico do Brasil</h4>
               <p className="text-xs text-muted-foreground mt-0.5">Potência Maçônica Regular e Legítima</p>
             </div>
-          </div>
+          </a>
         </div>
         <div className="relative">
           <div className="absolute -inset-4 bg-gold/10 rounded-2xl blur-2xl" />
