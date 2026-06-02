@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as TriagemRouteImport } from './routes/triagem'
+import { Route as PoliticaDePrivacidadeRouteImport } from './routes/politica-de-privacidade'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as MembrosIndexRouteImport } from './routes/membros/index'
 import { Route as MembrosCarteirinhaValidarRouteImport } from './routes/membros/carteirinha/validar'
@@ -19,6 +20,11 @@ import { Route as MembrosCarteirinhaIdRouteImport } from './routes/membros/carte
 const TriagemRoute = TriagemRouteImport.update({
   id: '/triagem',
   path: '/triagem',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PoliticaDePrivacidadeRoute = PoliticaDePrivacidadeRouteImport.update({
+  id: '/politica-de-privacidade',
+  path: '/politica-de-privacidade',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -50,6 +56,7 @@ const MembrosCarteirinhaIdRoute = MembrosCarteirinhaIdRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
   '/triagem': typeof TriagemRoute
   '/membros/': typeof MembrosIndexRoute
   '/membros/carteirinha/$id': typeof MembrosCarteirinhaIdRoute
@@ -58,6 +65,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
   '/triagem': typeof TriagemRoute
   '/membros': typeof MembrosIndexRoute
   '/membros/carteirinha/$id': typeof MembrosCarteirinhaIdRoute
@@ -67,6 +75,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
   '/triagem': typeof TriagemRoute
   '/membros/': typeof MembrosIndexRoute
   '/membros/carteirinha/$id': typeof MembrosCarteirinhaIdRoute
@@ -77,6 +86,7 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/politica-de-privacidade'
     | '/triagem'
     | '/membros/'
     | '/membros/carteirinha/$id'
@@ -85,6 +95,7 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/politica-de-privacidade'
     | '/triagem'
     | '/membros'
     | '/membros/carteirinha/$id'
@@ -93,6 +104,7 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/politica-de-privacidade'
     | '/triagem'
     | '/membros/'
     | '/membros/carteirinha/$id'
@@ -102,6 +114,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  PoliticaDePrivacidadeRoute: typeof PoliticaDePrivacidadeRoute
   TriagemRoute: typeof TriagemRoute
   MembrosIndexRoute: typeof MembrosIndexRoute
   MembrosCarteirinhaIdRoute: typeof MembrosCarteirinhaIdRoute
@@ -116,6 +129,13 @@ declare module '@tanstack/react-router' {
       path: '/triagem'
       fullPath: '/triagem'
       preLoaderRoute: typeof TriagemRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/politica-de-privacidade': {
+      id: '/politica-de-privacidade'
+      path: '/politica-de-privacidade'
+      fullPath: '/politica-de-privacidade'
+      preLoaderRoute: typeof PoliticaDePrivacidadeRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -158,6 +178,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  PoliticaDePrivacidadeRoute: PoliticaDePrivacidadeRoute,
   TriagemRoute: TriagemRoute,
   MembrosIndexRoute: MembrosIndexRoute,
   MembrosCarteirinhaIdRoute: MembrosCarteirinhaIdRoute,

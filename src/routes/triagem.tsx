@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { ArrowLeft, ArrowRight, Check } from "lucide-react";
+import { toast } from "sonner";
 
 export const Route = createFileRoute("/triagem")({
   head: () => ({
@@ -167,6 +168,68 @@ function TriagemPage() {
     return !!current;
   }, [q, current]);
 
+  const getAnswerLabel = (qId: string, val: string) => {
+    const question = questions.find(qi => qi.id === qId);
+    if (!question) return val;
+    if (question.type === "choice") {
+      const opt = question.options.find(o => o.value === val);
+      return opt ? opt.label : val;
+    }
+    return val;
+  };
+
+  const whatsAppUrl = useMemo(() => {
+    if (!submitted) return "";
+    const r = calcResult(answers);
+    const msg = `Olá! Concluí a Triagem Maçônica para a A.R.L.S. União Fraternal Nº 1.
+
+Seguem meus dados e respostas da triagem:
+*Nome:* ${answers.name || ""}
+*E-mail:* ${answers.email || ""}
+*Sobre mim:* ${answers.about || ""}
+
+*Respostas da Triagem:*
+- Faixa etária: ${getAnswerLabel("age", answers.age)}
+- Crença no Ser Supremo: ${getAnswerLabel("belief", answers.belief)}
+- Conduta moral/social: ${getAnswerLabel("conduct", answers.conduct)}
+- O que mais atrai: ${getAnswerLabel("motivation", answers.motivation)}
+- Disponibilidade: ${getAnswerLabel("time", answers.time)}
+- Sentimento sobre estudos: ${getAnswerLabel("study", answers.study)}
+- Caráter discreto: ${getAnswerLabel("secrecy", answers.secrecy)}
+- Contribuições financeiras: ${getAnswerLabel("contribution", answers.contribution)}
+
+*Afinidade da Triagem:* ${r.pct}% (${r.blocker ? "Perfil em formação" : "Perfil Compatível"})`;
+
+    return `https://wa.me/5513981326869?text=${encodeURIComponent(msg)}`;
+  }, [answers, submitted]);
+
+  const handleFinish = () => {
+    const r = calcResult(answers);
+    const msg = `Olá! Concluí a Triagem Maçônica para a A.R.L.S. União Fraternal Nº 1.
+
+Seguem meus dados e respostas da triagem:
+*Nome:* ${answers.name || ""}
+*E-mail:* ${answers.email || ""}
+*Sobre mim:* ${answers.about || ""}
+
+*Respostas da Triagem:*
+- Faixa etária: ${getAnswerLabel("age", answers.age)}
+- Crença no Ser Supremo: ${getAnswerLabel("belief", answers.belief)}
+- Conduta moral/social: ${getAnswerLabel("conduct", answers.conduct)}
+- O que mais atrai: ${getAnswerLabel("motivation", answers.motivation)}
+- Disponibilidade: ${getAnswerLabel("time", answers.time)}
+- Sentimento sobre estudos: ${getAnswerLabel("study", answers.study)}
+- Caráter discreto: ${getAnswerLabel("secrecy", answers.secrecy)}
+- Contribuições financeiras: ${getAnswerLabel("contribution", answers.contribution)}
+
+*Afinidade da Triagem:* ${r.pct}% (${r.blocker ? "Perfil em formação" : "Perfil Compatível"})`;
+
+    const url = `https://wa.me/5513981326869?text=${encodeURIComponent(msg)}`;
+    setSubmitted(true);
+    window.open(url, "_blank");
+    toast.success("Redirecionando para o WhatsApp da Loja...");
+  };
+
   if (submitted) {
     const r = calcResult(answers);
     const status = r.blocker
@@ -201,7 +264,7 @@ function TriagemPage() {
               <Link to="/">Voltar à página inicial</Link>
             </Button>
             <Button asChild variant="outline" className="border-gold/40 text-primary hover:bg-gold/10 h-11 px-8">
-              <a href="mailto:contato@arlsuniaofraternal.com.br">Falar com a Loja</a>
+              <a href={whatsAppUrl} target="_blank" rel="noopener noreferrer">Falar via WhatsApp</a>
             </Button>
           </div>
         </div>
@@ -309,7 +372,7 @@ function TriagemPage() {
           </Button>
         ) : (
           <Button
-            onClick={() => setSubmitted(true)}
+            onClick={handleFinish}
             disabled={!canNext}
             className="bg-gold-gradient text-primary hover:opacity-90 shadow-gold h-11 px-8 font-medium"
           >

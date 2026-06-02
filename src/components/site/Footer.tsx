@@ -1,41 +1,106 @@
+import { Link } from "@tanstack/react-router";
 import logoUrl from "@/assets/logo.svg";
 import gombLogoUrl from "@/assets/gomb-logo.png";
 
 export function Footer() {
   return (
-    <footer className="bg-primary text-primary-foreground/70">
+    <footer className="bg-primary text-primary-foreground/70 border-t border-gold/10">
       <div className="mx-auto max-w-7xl px-6 py-16">
-        <div className="grid md:grid-cols-3 gap-12">
-          <div>
-            <div className="flex items-center gap-3 mb-4">
+        <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-10">
+          {/* Column 1: Brand Info & GOMB Affiliation */}
+          <div className="space-y-4">
+            <div className="flex items-center gap-3">
               <img src={logoUrl} alt="Logo" className="h-12 w-12" />
               <div>
                 <div className="text-[10px] uppercase tracking-[0.25em] text-gold">A.R.L.S.</div>
-                <div className="font-display text-primary-foreground">União Fraternal Nº 1</div>
+                <div className="font-display text-primary-foreground font-semibold">União Fraternal Nº 1</div>
               </div>
             </div>
-            <p className="text-sm leading-relaxed mb-4">
+            <p className="text-xs leading-relaxed">
               Loja Maçônica simbólica, regular e legítima, fundada em 9 de março de 2024.
             </p>
-            <div className="flex items-center gap-3 pt-4 border-t border-primary-foreground/10">
-              <img src={gombLogoUrl} alt="Logo GOMB" className="h-10 w-10 object-contain bg-white/5 rounded p-0.5" />
+            
+            <a 
+              href="https://gomb.org.br/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 pt-4 border-t border-primary-foreground/10 group/gomb hover:opacity-90 transition-opacity"
+            >
+              <img src={gombLogoUrl} alt="Logo GOMB" className="h-10 w-10 object-contain" />
               <div>
                 <p className="text-[8px] uppercase tracking-wider text-gold font-bold">Filiada ao</p>
-                <p className="text-[10px] text-primary-foreground/90 font-medium leading-tight">G.O.M.B. — Grande Oriente Maçônico do Brasil</p>
+                <p className="text-[10px] text-primary-foreground/90 font-medium leading-tight group-hover/gomb:text-gold transition-colors">G.O.M.B. — Grande Oriente Maçônico do Brasil</p>
               </div>
+            </a>
+          </div>
+
+          {/* Column 2: Navigation Shortcuts */}
+          <div>
+            <h4 className="text-gold font-display text-base font-semibold mb-4">Navegação</h4>
+            <ul className="space-y-2 text-xs">
+              <li>
+                <Link to="/" className="hover:text-gold transition-colors">Página Inicial</Link>
+              </li>
+              <li>
+                <a href="/#sobre" className="hover:text-gold transition-colors">Sobre Nós</a>
+              </li>
+              <li>
+                <a href="/#maconaria" className="hover:text-gold transition-colors">A Maçonaria</a>
+              </li>
+              <li>
+                <a href="/#valores" className="hover:text-gold transition-colors">Nossos Valores</a>
+              </li>
+              <li>
+                <a href="/#faq" className="hover:text-gold transition-colors">Perguntas Frequentes (FAQ)</a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Column 3: Membership & Candidate Portals */}
+          <div>
+            <h4 className="text-gold font-display text-base font-semibold mb-4">Portais</h4>
+            <ul className="space-y-2 text-xs">
+              <li>
+                <Link to="/membros" className="hover:text-gold transition-colors">Portal de Membros</Link>
+              </li>
+              <li>
+                <Link to="/triagem" className="hover:text-gold transition-colors font-medium text-gold/90">Quero ser um Maçom</Link>
+              </li>
+              <li>
+                <Link to="/membros/carteirinha/validar" className="hover:text-gold transition-colors">Validação de Carteirinha</Link>
+              </li>
+              <li>
+                <Link to="/politica-de-privacidade" className="hover:text-gold transition-colors">Política de Privacidade</Link>
+              </li>
+              <li>
+                <Link to="/politica-de-privacidade" hash="cookies" className="hover:text-gold transition-colors">Uso de Cookies</Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Column 4: Contact & Principles */}
+          <div className="space-y-4">
+            <div>
+              <h4 className="text-gold font-display text-base font-semibold mb-2">Contato</h4>
+              <p className="text-xs leading-normal">
+                R. Costa Rica, 81 — Guilhermina<br />
+                Praia Grande — SP, 11702-190
+              </p>
+              <a href="mailto:contato@arlsuniaofraternal.com.br" className="text-xs text-gold hover:underline block mt-1">
+                contato@arlsuniaofraternal.com.br
+              </a>
+            </div>
+            <div className="pt-2 border-t border-primary-foreground/10">
+              <h4 className="text-gold font-display text-xs uppercase tracking-widest mb-1.5">Princípios</h4>
+              <p className="text-[10px] uppercase tracking-[0.2em] leading-relaxed">
+                Liberdade · Igualdade · Fraternidade
+              </p>
             </div>
           </div>
-          <div>
-            <h4 className="text-gold font-display text-lg mb-3">Contato</h4>
-            <p className="text-sm">R. Costa Rica, 81 — Guilhermina<br />Praia Grande — SP, 11702-190</p>
-            <p className="text-sm mt-2">contato@arlsuniaofraternal.com.br</p>
-          </div>
-          <div>
-            <h4 className="text-gold font-display text-lg mb-3">Princípios</h4>
-            <p className="text-sm uppercase tracking-[0.3em]">Liberdade<br />Igualdade<br />Fraternidade</p>
-          </div>
         </div>
+
         <div className="gold-divider my-10" />
+
         <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-primary-foreground/50">
           <p>© {new Date().getFullYear()} A.R.L.S. União Fraternal Nº 1 — Oriente de Praia Grande</p>
           <p>
