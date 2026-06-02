@@ -1,10 +1,12 @@
-import { Link } from "@tanstack/react-router";
+import { Link, useLocation } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import logoUrl from "@/assets/logo.svg";
 import { Button } from "@/components/ui/button";
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
+  const isHome = location.pathname === "/";
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -16,8 +18,8 @@ export function Header() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-primary/95 backdrop-blur-md shadow-elegant border-b border-gold/20 py-2"
+        scrolled || !isHome
+          ? "bg-[#0A1128]/95 backdrop-blur-md shadow-elegant border-b border-gold/20 py-2 text-primary-foreground"
           : "bg-transparent py-3"
       }`}
     >

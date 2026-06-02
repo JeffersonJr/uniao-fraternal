@@ -112,6 +112,13 @@ function MembersPortal() {
                         <p className="text-gold uppercase tracking-wider text-[10px] font-medium truncate mt-0.5">
                           {member.role}
                         </p>
+                        {member.office && (
+                          <div className="mt-1">
+                            <span className="inline-block px-1.5 py-0.5 text-[8px] font-bold uppercase tracking-wider bg-gold/15 text-[#C5A059] border border-gold/30 rounded leading-none">
+                              {member.office}
+                            </span>
+                          </div>
+                        )}
                       </div>
                     </div>
 

@@ -8,6 +8,7 @@ export interface Member {
   photo: string;
   status: "regular" | "irregular" | "inactive";
   joinedAt: string;
+  office?: string;
 }
 
 export const DEFAULT_MEMBERS: Member[] = [
@@ -20,7 +21,8 @@ export const DEFAULT_MEMBERS: Member[] = [
     email: "jefferson@arlsuniaofraternal.com.br",
     photo: "https://arlsuniaofraternal.com.br/wp-content/uploads/2025/08/cropped-cropped-Jefferson-Campos-1-128x128.webp",
     status: "regular",
-    joinedAt: "2020-08-09T00:00:00.000Z"
+    joinedAt: "2020-08-09T00:00:00.000Z",
+    office: "Secretário"
   },
   {
     id: "gunther-patrick-vargas-hager",
@@ -31,7 +33,8 @@ export const DEFAULT_MEMBERS: Member[] = [
     email: "gunther@arlsuniaofraternal.com.br",
     photo: "https://arlsuniaofraternal.com.br/wp-content/uploads/2025/08/cropped-Gunther-80x80.webp",
     status: "regular",
-    joinedAt: new Date().toISOString()
+    joinedAt: new Date().toISOString(),
+    office: "Venerável Mestre"
   },
   {
     id: "jose-aldeci-de-souza",
@@ -53,7 +56,8 @@ export const DEFAULT_MEMBERS: Member[] = [
     email: "marcos@arlsuniaofraternal.com.br",
     photo: "https://arlsuniaofraternal.com.br/wp-content/uploads/2025/08/cropped-Marcos-80x80.webp",
     status: "regular",
-    joinedAt: new Date("2023-09-23").toISOString()
+    joinedAt: new Date("2023-09-23").toISOString(),
+    office: "Primeiro Vigilante"
   },
   {
     id: "mariano",
@@ -86,7 +90,8 @@ export const DEFAULT_MEMBERS: Member[] = [
     email: "pimentel@arlsuniaofraternal.com.br",
     photo: "https://arlsuniaofraternal.com.br/wp-content/uploads/2025/08/cropped-Pimentel-80x80.webp",
     status: "regular",
-    joinedAt: new Date("2021-07-10").toISOString()
+    joinedAt: new Date("2021-07-10").toISOString(),
+    office: "Segundo Vigilante"
   },
   {
     id: "raffael-leite",

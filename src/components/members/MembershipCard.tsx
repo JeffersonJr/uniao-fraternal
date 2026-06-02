@@ -97,6 +97,12 @@ export function MembershipCard({ member, viewMode = "digital" }: MembershipCardP
                   <span className="text-[7px] text-muted-foreground uppercase tracking-wider block">Data Iniciação</span>
                   <span className="text-xs font-medium text-[#0C1938]">{member.initiationDate}</span>
                 </div>
+                {member.office && (
+                  <div className="col-span-2 border-t border-[#C5A059]/15 pt-1">
+                    <span className="text-[7px] text-muted-foreground uppercase tracking-wider block">Cargo na Loja</span>
+                    <span className="text-xs font-bold text-[#C5A059]">{member.office}</span>
+                  </div>
+                )}
               </div>
             </div>
           </div>
@@ -248,7 +254,13 @@ export function MembershipCard({ member, viewMode = "digital" }: MembershipCardP
                   <p className="text-[7px] uppercase tracking-[0.1em] text-muted-foreground mb-0.5">CIM Número</p>
                   <p className="text-xs text-[#0C1938] font-bold">{member.cim}</p>
                 </div>
-                <div className="col-span-2">
+                {member.office && (
+                  <div className="col-span-2 border-t border-[#C5A059]/15 pt-2">
+                    <p className="text-[7px] uppercase tracking-[0.1em] text-muted-foreground mb-0.5">Cargo na Loja</p>
+                    <p className="text-xs text-[#C5A059] font-bold">{member.office}</p>
+                  </div>
+                )}
+                <div className="col-span-2 border-t border-[#C5A059]/15 pt-2">
                   <p className="text-[7px] uppercase tracking-[0.1em] text-muted-foreground mb-0.5">E-mail</p>
                   <p className="text-xs text-[#0C1938] font-medium truncate">{member.email}</p>
                 </div>
