@@ -21,6 +21,7 @@ function ViewMembershipCard() {
   const { id } = useParams({ from: "/membros/carteirinha/$id" });
   const [member, setMember] = useState<Member | null>(null);
   const [loading, setLoading] = useState(true);
+  const [viewMode, setViewMode] = useState<"digital" | "print">("digital");
 
   useEffect(() => {
     // Load member client-side
@@ -31,7 +32,14 @@ function ViewMembershipCard() {
 
   const handlePrint = () => {
     if (typeof window !== "undefined") {
-      window.print();
+      if (viewMode !== "print") {
+        setViewMode("print");
+        setTimeout(() => {
+          window.print();
+        }, 200);
+      } else {
+        window.print();
+      }
     }
   };
 
@@ -96,9 +104,9 @@ function ViewMembershipCard() {
       </div>
 
       <main className="flex-grow pt-28 pb-16 px-6 print:p-0 print:pt-4">
-        <div className="mx-auto max-w-3xl flex flex-col items-center">
+        <div className="mx-auto max-w-4xl flex flex-col items-center">
           {/* Top navigation - hide on print */}
-          <div className="w-full flex justify-between items-center mb-8 print:hidden">
+          <div className="w-full flex justify-between items-center mb-8 print:hidden max-w-3xl">
             <Link
               to="/membros"
               className="inline-flex items-center gap-2 text-xs uppercase tracking-wider text-muted-foreground hover:text-gold transition-colors"
@@ -115,9 +123,33 @@ function ViewMembershipCard() {
             </Link>
           </div>
 
+          {/* Tab Switcher - hide on print */}
+          <div className="flex bg-secondary border border-border p-1 rounded-xl mb-8 w-full max-w-[380px] print:hidden animate-fade-up">
+            <button
+              onClick={() => setViewMode("digital")}
+              className={`flex-1 py-2 text-xs font-semibold rounded-lg transition-all cursor-pointer ${
+                viewMode === "digital"
+                  ? "bg-card text-primary shadow-sm border border-border"
+                  : "text-muted-foreground hover:text-primary"
+              }`}
+            >
+              Versão Digital (Vertical)
+            </button>
+            <button
+              onClick={() => setViewMode("print")}
+              className={`flex-1 py-2 text-xs font-semibold rounded-lg transition-all cursor-pointer ${
+                viewMode === "print"
+                  ? "bg-card text-primary shadow-sm border border-border"
+                  : "text-muted-foreground hover:text-primary"
+              }`}
+            >
+              Versão Impressa (Horizontal)
+            </button>
+          </div>
+
           {/* Interactive membership card wrapper */}
           <div className="flex justify-center w-full mb-8 animate-fade-up print:m-0">
-            <MembershipCard member={member} />
+            <MembershipCard member={member} viewMode={viewMode} />
           </div>
 
           {/* Actions Bar - hide on print */}
