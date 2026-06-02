@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { z } from "zod";
 import { Member, getMemberById, getMembers } from "@/lib/members-db";
@@ -7,8 +7,10 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
-import { ShieldCheck, ShieldAlert, ArrowLeft, Calendar, FileText, User, Mail, Search, CheckCircle } from "lucide-react";
+import { ShieldCheck, ShieldAlert, ArrowLeft, Calendar, FileText, User, Mail, Search, CheckCircle, Camera, X } from "lucide-react";
 import logoUrl from "@/assets/logo.svg";
+import { Html5Qrcode } from "html5-qrcode";
+import { toast } from "sonner";
 
 const searchSchema = z.object({
   id: z.string().optional(),
@@ -27,11 +29,106 @@ export const Route = createFileRoute("/membros/carteirinha/validar")({
 
 function ValidateCardPage() {
   const search = Route.useSearch();
+  const navigate = useNavigate();
   const [member, setMember] = useState<Member | null>(null);
   const [searchId, setSearchId] = useState("");
   const [searched, setSearched] = useState(false);
   const [loading, setLoading] = useState(true);
   const [validationTime, setValidationTime] = useState("");
+
+  // QR Code Scanner state
+  const [isScannerOpen, setIsScannerOpen] = useState(false);
+  const [scannerError, setScannerError] = useState("");
+
+  const handleScannedText = (text: string) => {
+    try {
+      if (text.startsWith("http://") || text.startsWith("https://")) {
+        const url = new URL(text);
+        const idParam = url.searchParams.get("id");
+        if (idParam) {
+          navigate({ to: "/membros/carteirinha/validar", search: { id: idParam } });
+        } else {
+          setSearchId(text);
+          setMember(null);
+          setSearched(true);
+        }
+      } else {
+        setSearchId(text);
+        let found = getMemberById(text);
+        if (!found) {
+          const all = getMembers();
+          found = all.find((m) => m.cim === text) || null;
+        }
+        setMember(found);
+        setSearched(true);
+      }
+    } catch (err) {
+      setSearchId(text);
+      let found = getMemberById(text);
+      if (!found) {
+        const all = getMembers();
+        found = all.find((m) => m.cim === text) || null;
+      }
+      setMember(found);
+      setSearched(true);
+    }
+  };
+
+  useEffect(() => {
+    if (!isScannerOpen) return;
+
+    let isCancelled = false;
+    let html5QrCode: Html5Qrcode | null = null;
+    
+    const startScanner = async () => {
+      try {
+        if (isCancelled) return;
+        html5QrCode = new Html5Qrcode("reader");
+        
+        await html5QrCode.start(
+          { facingMode: "environment" },
+          {
+            fps: 10,
+            qrbox: (width, height) => {
+              const size = Math.min(width, height) * 0.7;
+              return { width: size, height: size };
+            }
+          },
+          (decodedText) => {
+            if (html5QrCode) {
+              html5QrCode.stop().then(() => {
+                setIsScannerOpen(false);
+                handleScannedText(decodedText);
+                toast.success("Código QR lido com sucesso!");
+              }).catch(console.error);
+            }
+          },
+          () => {} // Quiet error
+        );
+
+        if (isCancelled && html5QrCode.isScanning) {
+          html5QrCode.stop().catch(console.error);
+        }
+      } catch (err) {
+        if (!isCancelled) {
+          console.error(err);
+          setScannerError("Permissão de câmera negada ou dispositivo sem câmera disponível.");
+        }
+      }
+    };
+
+    const timer = setTimeout(() => {
+      startScanner();
+    }, 150);
+
+    return () => {
+      isCancelled = true;
+      clearTimeout(timer);
+      if (html5QrCode && html5QrCode.isScanning) {
+        html5QrCode.stop().catch(console.error);
+      }
+    };
+  }, [isScannerOpen]);
 
   useEffect(() => {
     if (search.id) {
@@ -198,12 +295,23 @@ function ValidateCardPage() {
                   <div className="flex flex-col sm:flex-row gap-3 justify-center">
                     <Button
                       onClick={() => {
+                        setScannerError("");
+                        setIsScannerOpen(true);
+                      }}
+                      variant="outline"
+                      className="border-gold/30 hover:bg-gold/5 text-primary h-10 px-5 text-xs font-semibold flex items-center gap-2 cursor-pointer"
+                    >
+                      <Camera className="w-4 h-4 text-gold" />
+                      Escanear QR Code
+                    </Button>
+                    <Button
+                      onClick={() => {
                         setSearched(false);
                         setSearchId("");
                       }}
-                      className="bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-6 text-xs font-semibold"
+                      className="bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-6 text-xs font-semibold cursor-pointer"
                     >
-                      Tentar Novamente
+                      Digitar CIM / ID
                     </Button>
                     <Button asChild variant="outline" className="border-border hover:bg-secondary h-10 px-6 text-xs font-semibold">
                       <Link to="/membros">Ver Lista de Membros</Link>
@@ -238,8 +346,20 @@ function ValidateCardPage() {
                   />
                 </div>
 
-                <div className="flex gap-3 justify-end">
-                  <Button type="submit" className="bg-gold-gradient text-primary hover:opacity-90 shadow-gold font-medium h-11 px-8">
+                <div className="flex flex-col sm:flex-row gap-3 justify-end pt-2">
+                  <Button
+                    type="button"
+                    onClick={() => {
+                      setScannerError("");
+                      setIsScannerOpen(true);
+                    }}
+                    variant="outline"
+                    className="border-gold/30 hover:bg-gold/5 text-primary h-11 px-5 text-sm font-semibold flex items-center gap-2 cursor-pointer"
+                  >
+                    <Camera className="w-4 h-4 text-gold" />
+                    Escanear QR Code (Câmera)
+                  </Button>
+                  <Button type="submit" className="bg-gold-gradient text-primary hover:opacity-90 shadow-gold font-medium h-11 px-8 cursor-pointer">
                     Consultar Credencial
                   </Button>
                 </div>
@@ -248,6 +368,74 @@ function ValidateCardPage() {
           )}
         </div>
       </main>
+
+      {/* Scanner Overlay Modal */}
+      {isScannerOpen && (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 backdrop-blur-md p-4 animate-fade-in print:hidden">
+          <div className="bg-[#0A1128] border border-gold/35 rounded-3xl max-w-md w-full p-6 shadow-2xl relative flex flex-col items-center">
+            
+            {/* Close Button */}
+            <button
+              onClick={() => setIsScannerOpen(false)}
+              className="absolute top-4 right-4 p-2 text-primary-foreground/70 hover:text-gold transition-colors focus:outline-none cursor-pointer"
+              aria-label="Fechar"
+            >
+              <X className="w-5 h-5" />
+            </button>
+
+            {/* Header */}
+            <div className="text-center mb-6">
+              <Camera className="w-10 h-10 text-gold mx-auto mb-2 drop-shadow-[0_0_8px_rgba(212,175,55,0.4)]" />
+              <h3 className="font-display text-lg font-bold text-primary-foreground">
+                Escanear Carteirinha
+              </h3>
+              <p className="text-xs text-primary-foreground/60 mt-1 max-w-[280px]">
+                Aponte a câmera do celular para o código QR localizado no verso da carteirinha do membro.
+              </p>
+            </div>
+
+            {/* Camera Viewport Container */}
+            <div className="relative w-full aspect-square max-w-[280px] rounded-2xl overflow-hidden border border-gold/25 bg-black flex items-center justify-center">
+              {scannerError ? (
+                <div className="p-4 text-center text-xs text-destructive flex flex-col items-center gap-2">
+                  <ShieldAlert className="w-8 h-8 text-destructive" />
+                  <p>{scannerError}</p>
+                </div>
+              ) : (
+                <>
+                  {/* html5-qrcode target */}
+                  <div id="reader" className="w-full h-full object-cover [&_video]:object-cover" />
+                  
+                  {/* Viewfinder Target Border Overlay */}
+                  <div className="absolute inset-0 pointer-events-none flex items-center justify-center p-8">
+                    <div className="w-full h-full border-[3px] border-dashed border-gold/50 rounded-xl relative">
+                      {/* Viewfinder Corners */}
+                      <div className="absolute -top-[3px] -left-[3px] w-6 h-6 border-t-[3px] border-l-[3px] border-gold rounded-tl-lg" />
+                      <div className="absolute -top-[3px] -right-[3px] w-6 h-6 border-t-[3px] border-r-[3px] border-gold rounded-tr-lg" />
+                      <div className="absolute -bottom-[3px] -left-[3px] w-6 h-6 border-b-[3px] border-l-[3px] border-gold rounded-bl-lg" />
+                      <div className="absolute -bottom-[3px] -right-[3px] w-6 h-6 border-b-[3px] border-r-[3px] border-gold rounded-br-lg" />
+                      
+                      {/* Laser pulsing line */}
+                      <div className="absolute top-1/2 left-0 right-0 h-[2px] bg-gold/80 animate-[ping_2s_infinite] shadow-[0_0_8px_rgba(212,175,55,0.8)]" />
+                    </div>
+                  </div>
+                </>
+              )}
+            </div>
+
+            {/* Footer Buttons */}
+            <div className="mt-6 flex justify-center w-full">
+              <Button
+                onClick={() => setIsScannerOpen(false)}
+                variant="outline"
+                className="border-gold/30 hover:bg-gold/5 text-primary-foreground hover:text-gold h-10 px-6 text-xs font-semibold cursor-pointer"
+              >
+                Cancelar
+              </Button>
+            </div>
+          </div>
+        </div>
+      )}
 
       <Footer />
     </div>
