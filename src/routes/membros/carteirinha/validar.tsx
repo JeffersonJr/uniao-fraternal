@@ -169,6 +169,7 @@ function ValidateCardPage() {
                       A.R.L.S. União Fraternal Nº 1
                     </p>
                     <p>Oriente de Praia Grande · SP · Brasil</p>
+                    <p className="text-[9px] text-gold/65 font-medium mt-1">Filiada ao Grande Oriente Maçônico do Brasil (GOMB)</p>
                   </div>
                 </div>
               ) : (

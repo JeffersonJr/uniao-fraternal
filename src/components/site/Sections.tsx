@@ -6,6 +6,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
 import { Compass, Eye, ShieldCheck, BookOpen, Users, Heart, Sparkles, Scale, Handshake } from "lucide-react";
+import gombLogoUrl from "@/assets/gomb-logo.png";
 
 export function About() {
   return (
@@ -19,13 +20,21 @@ export function About() {
           <div className="gold-divider w-24 mb-8" />
           <p className="text-muted-foreground leading-relaxed mb-4">
             A <strong className="text-foreground">União Fraternal</strong>, fundada em 9 de março de 2024 em Santos,
-            é uma Loja Maçônica simbólica, regular e legítima, com personalidade jurídica de direito privado.
+            é uma Loja Maçônica simbólica, regular e legítima, filiada ao <strong className="text-foreground">G.O.M.B. (Grande Oriente Maçônico do Brasil)</strong>, com personalidade jurídica de direito privado.
           </p>
-          <p className="text-muted-foreground leading-relaxed">
+          <p className="text-muted-foreground leading-relaxed mb-6">
             Liderada pelo <strong className="text-foreground">Irmão Gunther</strong>, Mestre Instalado e Venerável Mestre,
             nossa Loja foi estabelecida por uma comissão de Mestres Instalados Regulares com o compromisso de difundir
             os valores da Maçonaria pura e tradicional por todo o Brasil.
           </p>
+          <div className="flex items-center gap-4 p-4 bg-secondary border border-border rounded-xl">
+            <img src={gombLogoUrl} alt="Logo GOMB" className="h-16 w-16 object-contain" />
+            <div>
+              <p className="text-[10px] uppercase tracking-[0.2em] text-gold font-bold">Filiada ao</p>
+              <h4 className="font-display text-base text-primary font-semibold leading-tight">Grande Oriente Maçônico do Brasil</h4>
+              <p className="text-xs text-muted-foreground mt-0.5">Potência Maçônica Regular e Legítima</p>
+            </div>
+          </div>
         </div>
         <div className="relative">
           <div className="absolute -inset-4 bg-gold/10 rounded-2xl blur-2xl" />
