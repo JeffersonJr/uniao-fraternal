@@ -17,6 +17,7 @@ export interface Member {
   status: "regular" | "irregular" | "inactive";
   joinedAt: string;
   office?: string;
+  isHonorary?: boolean;
 }
 
 export const DEFAULT_MEMBERS: Member[] = [
@@ -76,7 +77,8 @@ export const DEFAULT_MEMBERS: Member[] = [
     email: "mariano@arlsuniaofraternal.com.br",
     photo: "",
     status: "regular",
-    joinedAt: new Date().toISOString()
+    joinedAt: new Date().toISOString(),
+    isHonorary: true
   },
   {
     id: "noris-eduardo",
@@ -121,7 +123,8 @@ export const DEFAULT_MEMBERS: Member[] = [
     email: "Raphael@arlsuniaofraternal.com.br",
     photo: raphaelPhoto,
     status: "regular",
-    joinedAt: new Date().toISOString()
+    joinedAt: new Date().toISOString(),
+    isHonorary: true
   }
 ];
 
