@@ -74,7 +74,7 @@ export const DEFAULT_MEMBERS: Member[] = [
     cim: "Não informada",
     initiationDate: "Não informada",
     email: "mariano@arlsuniaofraternal.com.br",
-    photo: "https://arlsuniaofraternal.com.br/wp-content/uploads/2025/08/cropped-Mariano-80x80.webp",
+    photo: "",
     status: "regular",
     joinedAt: new Date().toISOString()
   },
@@ -108,7 +108,7 @@ export const DEFAULT_MEMBERS: Member[] = [
     cim: "Não informada",
     initiationDate: "Não informada",
     email: "raffael@arlsuniaofraternal.com.br",
-    photo: "https://arlsuniaofraternal.com.br/wp-content/uploads/2025/08/cropped-Rafael-80x80.webp",
+    photo: "",
     status: "regular",
     joinedAt: new Date().toISOString()
   },
