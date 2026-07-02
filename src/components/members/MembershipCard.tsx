@@ -3,6 +3,7 @@ import QRCode from "qrcode";
 import { Member } from "@/lib/members-db";
 import logoUrl from "@/assets/logo.svg";
 import gombLogoUrl from "@/assets/gomb-logo.png";
+import { Badge } from "@/components/ui/badge";
 
 interface MembershipCardProps {
   member: Member;
@@ -82,11 +83,18 @@ export function MembershipCard({ member, viewMode = "digital" }: MembershipCardP
 
             {/* Right side: Member Details */}
             <div className="space-y-2">
-              <div>
-                <span className="text-[7px] text-muted-foreground uppercase tracking-wider block">Nome do Ir.·.</span>
-                <h3 className="font-display text-lg font-bold text-[#0C1938] leading-tight truncate">
-                  {member.name}
-                </h3>
+              <div className="flex justify-between items-start gap-2">
+                <div className="overflow-hidden">
+                  <span className="text-[7px] text-muted-foreground uppercase tracking-wider block">Nome do Ir.·.</span>
+                  <h3 className="font-display text-lg font-bold text-[#0C1938] leading-tight truncate">
+                    {member.name}
+                  </h3>
+                </div>
+                {member.isHonorary && (
+                  <Badge variant="secondary" className="text-[8px] uppercase tracking-wider bg-[#C5A059]/10 text-[#C5A059] border-[#C5A059]/30 mt-1 shrink-0">
+                    Honorário
+                  </Badge>
+                )}
               </div>
 
               <div className="grid grid-cols-2 gap-2 border-t border-[#C5A059]/20 pt-2">
@@ -242,8 +250,13 @@ export function MembershipCard({ member, viewMode = "digital" }: MembershipCardP
                   </div>
 
                   {/* Name & Role */}
-                  <h2 className="font-display text-xl text-center text-[#0C1938] leading-snug font-bold mb-1">
+                  <h2 className="font-display text-xl text-center text-[#0C1938] leading-snug font-bold mb-1 flex items-center justify-center gap-2">
                     {member.name}
+                    {member.isHonorary && (
+                      <Badge variant="secondary" className="text-[8px] uppercase tracking-wider bg-[#C5A059]/10 text-[#C5A059] border-[#C5A059]/30">
+                        Honorário
+                      </Badge>
+                    )}
                   </h2>
                   <p className="text-[#C5A059] uppercase tracking-[0.2em] text-[10px] font-bold mb-4">
                     {member.role}
@@ -411,8 +424,13 @@ export function MembershipCard({ member, viewMode = "digital" }: MembershipCardP
                 </div>
 
                 {/* Name & Role */}
-                <h2 className="font-display text-xl text-center text-[#0C1938] leading-snug font-bold mb-1">
+                <h2 className="font-display text-xl text-center text-[#0C1938] leading-snug font-bold mb-1 flex items-center justify-center gap-2">
                   {member.name}
+                  {member.isHonorary && (
+                    <Badge variant="secondary" className="text-[8px] uppercase tracking-wider bg-[#C5A059]/10 text-[#C5A059] border-[#C5A059]/30">
+                      Honorário
+                    </Badge>
+                  )}
                 </h2>
                 <p className="text-[#C5A059] uppercase tracking-[0.2em] text-[10px] font-bold mb-4">
                   {member.role}
