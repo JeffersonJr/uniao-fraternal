@@ -1,3 +1,11 @@
+import guntherPhoto from "./members/gunther.png";
+import jeffersonPhoto from "./members/jefferson.png";
+import marcosPhoto from "./members/marcos.png";
+import norisPhoto from "./members/noris.png";
+import pimentelPhoto from "./members/pimentel.png";
+import raphaelPhoto from "./members/raphael.png";
+import souzaPhoto from "./members/souza.png";
+
 export interface Member {
   id: string;
   name: string;
@@ -19,7 +27,7 @@ export const DEFAULT_MEMBERS: Member[] = [
     cim: "Não informada",
     initiationDate: "Não informada",
     email: "gunther@arlsuniaofraternal.com.br",
-    photo: "https://arlsuniaofraternal.com.br/wp-content/uploads/2025/08/cropped-Gunther-80x80.webp",
+    photo: guntherPhoto,
     status: "regular",
     joinedAt: new Date().toISOString(),
     office: "Venerável Mestre"
@@ -31,7 +39,7 @@ export const DEFAULT_MEMBERS: Member[] = [
     cim: "32071",
     initiationDate: "09 de Agosto de 2020",
     email: "jefferson@arlsuniaofraternal.com.br",
-    photo: "https://arlsuniaofraternal.com.br/wp-content/uploads/2025/08/cropped-cropped-Jefferson-Campos-1-128x128.webp",
+    photo: jeffersonPhoto,
     status: "regular",
     joinedAt: "2020-08-09T00:00:00.000Z",
     office: "Secretário"
@@ -43,7 +51,7 @@ export const DEFAULT_MEMBERS: Member[] = [
     cim: "Não informada",
     initiationDate: "09 de Setembro de 2023",
     email: "souza@arlsuniaofraternal.com.br",
-    photo: "https://arlsuniaofraternal.com.br/wp-content/uploads/2025/08/cropped-Souza-80x80.webp",
+    photo: souzaPhoto,
     status: "regular",
     joinedAt: new Date("2023-09-09").toISOString()
   },
@@ -54,7 +62,7 @@ export const DEFAULT_MEMBERS: Member[] = [
     cim: "Não informada",
     initiationDate: "23 de Setembro de 2023",
     email: "marcos@arlsuniaofraternal.com.br",
-    photo: "https://arlsuniaofraternal.com.br/wp-content/uploads/2025/08/cropped-Marcos-80x80.webp",
+    photo: marcosPhoto,
     status: "regular",
     joinedAt: new Date("2023-09-23").toISOString(),
     office: "Primeiro Vigilante"
@@ -77,7 +85,7 @@ export const DEFAULT_MEMBERS: Member[] = [
     cim: "Não informada",
     initiationDate: "Não informada",
     email: "noris@arlsuniaofraternal.com.br",
-    photo: "https://arlsuniaofraternal.com.br/wp-content/uploads/2025/08/cropped-Noris-80x80.webp",
+    photo: norisPhoto,
     status: "regular",
     joinedAt: new Date().toISOString()
   },
@@ -88,7 +96,7 @@ export const DEFAULT_MEMBERS: Member[] = [
     cim: "Não informada",
     initiationDate: "10 de Julho de 2021",
     email: "pimentel@arlsuniaofraternal.com.br",
-    photo: "https://arlsuniaofraternal.com.br/wp-content/uploads/2025/08/cropped-Pimentel-80x80.webp",
+    photo: pimentelPhoto,
     status: "regular",
     joinedAt: new Date("2021-07-10").toISOString(),
     office: "Segundo Vigilante"
@@ -111,7 +119,7 @@ export const DEFAULT_MEMBERS: Member[] = [
     cim: "Não informada",
     initiationDate: "Não informada",
     email: "Raphael@arlsuniaofraternal.com.br",
-    photo: "",
+    photo: raphaelPhoto,
     status: "regular",
     joinedAt: new Date().toISOString()
   }
