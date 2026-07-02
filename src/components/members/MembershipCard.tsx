@@ -71,7 +71,7 @@ export function MembershipCard({ member, viewMode = "digital" }: MembershipCardP
                 {member.photo ? (
                   <img src={member.photo} alt={member.name} className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                 ) : (
-                  <span className="font-display text-[#C5A059] text-3xl">G</span>
+                  <span className="font-display text-[#C5A059] text-3xl">{member.name.charAt(0)}</span>
                 )}
               </div>
               <div className="mt-2 text-center">
@@ -236,7 +236,7 @@ export function MembershipCard({ member, viewMode = "digital" }: MembershipCardP
                       {member.photo ? (
                         <img src={member.photo} alt={member.name} className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                       ) : (
-                        <span className="font-display text-[#C5A059] text-3xl">G</span>
+                        <span className="font-display text-[#C5A059] text-3xl">{member.name.charAt(0)}</span>
                       )}
                     </div>
                   </div>
@@ -405,7 +405,7 @@ export function MembershipCard({ member, viewMode = "digital" }: MembershipCardP
                     {member.photo ? (
                       <img src={member.photo} alt={member.name} className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                     ) : (
-                      <span className="font-display text-[#C5A059] text-3xl">G</span>
+                      <span className="font-display text-[#C5A059] text-3xl">{member.name.charAt(0)}</span>
                     )}
                   </div>
                 </div>
