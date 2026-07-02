@@ -11,7 +11,7 @@ import { toast } from "sonner";
 export const Route = createFileRoute("/triagem")({
   head: () => ({
     meta: [
-      { title: "Triagem Maçônica — A.R.L.S. União Fraternal Nº 1" },
+      { title: "Triagem Maçônica — A.R.L.S. União Fraternal Nº 120" },
       { name: "description", content: "Descubra se você tem o perfil para iniciar a jornada maçônica. Responda nossa triagem em poucos minutos." },
     ],
   }),
@@ -133,6 +133,14 @@ const questions: Question[] = [
     placeholder: "Escreva algumas linhas sobre você...",
     long: true,
   },
+  {
+    id: "expectations",
+    type: "text",
+    title: "O que você acredita que acontecerá com sua vida ao ser aceito na Ordem?",
+    subtitle: "Importante: Informamos também que você terá que escrever e nos enviar uma carta de próprio punho onde fale com riqueza de detalhes sobre si mesmo.",
+    placeholder: "Descreva suas expectativas...",
+    long: true,
+  },
 ];
 
 function calcResult(answers: Record<string, string>) {
@@ -181,12 +189,13 @@ function TriagemPage() {
   const whatsAppUrl = useMemo(() => {
     if (!submitted) return "";
     const r = calcResult(answers);
-    const msg = `Olá! Concluí a Triagem Maçônica para a A.R.L.S. União Fraternal Nº 1.
+    const msg = `Olá! Concluí a Triagem Maçônica para a A.R.L.S. União Fraternal Nº 120.
 
 Seguem meus dados e respostas da triagem:
 *Nome:* ${answers.name || ""}
 *E-mail:* ${answers.email || ""}
 *Sobre mim:* ${answers.about || ""}
+*Expectativas:* ${answers.expectations || ""}
 
 *Respostas da Triagem:*
 - Faixa etária: ${getAnswerLabel("age", answers.age)}
@@ -200,17 +209,18 @@ Seguem meus dados e respostas da triagem:
 
 *Afinidade da Triagem:* ${r.pct}% (${r.blocker ? "Perfil em formação" : "Perfil Compatível"})`;
 
-    return `https://wa.me/5513981326869?text=${encodeURIComponent(msg)}`;
+    return `https://wa.me/5511911019192?text=${encodeURIComponent(msg)}`;
   }, [answers, submitted]);
 
   const handleFinish = () => {
     const r = calcResult(answers);
-    const msg = `Olá! Concluí a Triagem Maçônica para a A.R.L.S. União Fraternal Nº 1.
+    const msg = `Olá! Concluí a Triagem Maçônica para a A.R.L.S. União Fraternal Nº 120.
 
 Seguem meus dados e respostas da triagem:
 *Nome:* ${answers.name || ""}
 *E-mail:* ${answers.email || ""}
 *Sobre mim:* ${answers.about || ""}
+*Expectativas:* ${answers.expectations || ""}
 
 *Respostas da Triagem:*
 - Faixa etária: ${getAnswerLabel("age", answers.age)}
@@ -224,7 +234,7 @@ Seguem meus dados e respostas da triagem:
 
 *Afinidade da Triagem:* ${r.pct}% (${r.blocker ? "Perfil em formação" : "Perfil Compatível"})`;
 
-    const url = `https://wa.me/5513981326869?text=${encodeURIComponent(msg)}`;
+    const url = `https://wa.me/5511911019192?text=${encodeURIComponent(msg)}`;
     setSubmitted(true);
     window.open(url, "_blank");
     toast.success("Redirecionando para o WhatsApp da Loja...");
@@ -393,7 +403,7 @@ function Shell({ children }: { children: React.ReactNode }) {
             <img src={logoUrl} alt="Logo" className="h-10 w-10" />
             <div>
               <div className="text-[10px] uppercase tracking-[0.25em] text-gold">A.R.L.S.</div>
-              <div className="font-display text-sm">União Fraternal Nº 1</div>
+              <div className="font-display text-sm">União Fraternal Nº 120</div>
             </div>
           </Link>
           <Link to="/" className="text-sm text-primary-foreground/70 hover:text-gold transition-colors">

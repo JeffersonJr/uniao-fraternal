@@ -31,7 +31,7 @@ export function Hero() {
 
         <h1 className="animate-fade-up font-display text-5xl md:text-7xl font-light mb-6 leading-[1.05]" style={{ animationDelay: "0.2s" }}>
           A.R.L.S. <span className="italic text-gold">União Fraternal</span><br />
-          <span className="text-3xl md:text-5xl text-primary-foreground/80">Nº 1</span>
+          <span className="text-3xl md:text-5xl text-primary-foreground/80">Nº 120</span>
         </h1>
 
         <div className="animate-fade-up flex items-center justify-center gap-4 mb-8" style={{ animationDelay: "0.3s" }}>

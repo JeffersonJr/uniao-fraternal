@@ -13,7 +13,7 @@ export function Footer() {
               <img src={logoUrl} alt="Logo" className="h-12 w-12" />
               <div>
                 <div className="text-[10px] uppercase tracking-[0.25em] text-gold">A.R.L.S.</div>
-                <div className="font-display text-primary-foreground font-semibold">União Fraternal Nº 1</div>
+                <div className="font-display text-primary-foreground font-semibold">União Fraternal Nº 120</div>
               </div>
             </div>
             <p className="text-xs leading-relaxed">
@@ -102,7 +102,7 @@ export function Footer() {
         <div className="gold-divider my-10" />
 
         <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-primary-foreground/50">
-          <p>© {new Date().getFullYear()} A.R.L.S. União Fraternal Nº 1 — Oriente de Praia Grande</p>
+          <p>© {new Date().getFullYear()} A.R.L.S. União Fraternal Nº 120 — Oriente de Praia Grande</p>
           <p>
             Powered by:{" "}
             <a

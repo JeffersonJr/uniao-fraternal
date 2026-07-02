@@ -11,7 +11,7 @@ import { ArrowLeft, Upload, User, FileText, Calendar, Mail, Compass } from "luci
 export const Route = createFileRoute("/membros/carteirinha/nova")({
   head: () => ({
     meta: [
-      { title: "Gerar Carteirinha Virtual — A.R.L.S. União Fraternal Nº 1" },
+      { title: "Gerar Carteirinha Virtual — A.R.L.S. União Fraternal Nº 120" },
       { name: "description", content: "Cadastre seus dados e foto para emitir sua carteirinha de membro virtual." },
     ],
   }),

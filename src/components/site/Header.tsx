@@ -34,12 +34,12 @@ export function Header() {
         <Link to="/" className="flex items-center gap-3 group">
           <img
             src={logoUrl}
-            alt="A.R.L.S. União Fraternal Nº 1"
+            alt="A.R.L.S. União Fraternal Nº 120"
             className={`object-contain transition-all duration-300 ${scrolled ? "h-10 w-10" : "h-12 w-12"}`}
           />
           <div className="flex flex-col">
             <div className="text-[8px] sm:text-[10px] uppercase tracking-[0.25em] text-gold/80">A.R.L.S.</div>
-            <div className="font-display text-xs sm:text-base text-primary-foreground leading-tight">União Fraternal Nº 1</div>
+            <div className="font-display text-xs sm:text-base text-primary-foreground leading-tight">União Fraternal Nº 120</div>
           </div>
         </Link>
         <nav className="hidden md:flex items-center gap-8 text-sm text-primary-foreground/80">

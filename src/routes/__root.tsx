@@ -76,7 +76,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "União Fraternal" },
       { name: "description", content: "A modern, elegant website that introduces Freemasonry and facilitates prospective member inquiries." },
-      { name: "author", content: "A.R.L.S. União Fraternal Nº 1" },
+      { name: "author", content: "A.R.L.S. União Fraternal Nº 120" },
       { property: "og:title", content: "União Fraternal" },
       { property: "og:description", content: "A modern, elegant website that introduces Freemasonry and facilitates prospective member inquiries." },
       { property: "og:type", content: "website" },

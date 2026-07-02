@@ -52,7 +52,7 @@ export function MembershipCard({ member, viewMode = "digital" }: MembershipCardP
               <img src={logoUrl} alt="Brasão" className="h-9 w-9 drop-shadow-[0_0_4px_rgba(197,160,89,0.3)]" />
               <div>
                 <h3 className="text-[9px] uppercase tracking-[0.2em] text-[#C5A059] leading-none font-bold">A.R.L.S.</h3>
-                <h2 className="font-display text-sm font-bold text-[#0C1938] leading-tight">União Fraternal Nº 1</h2>
+                <h2 className="font-display text-sm font-bold text-[#0C1938] leading-tight">União Fraternal Nº 120</h2>
                 <p className="text-[7px] uppercase tracking-[0.05em] text-muted-foreground">Filiada ao Grande Oriente Maçônico do Brasil</p>
               </div>
             </div>
@@ -69,7 +69,7 @@ export function MembershipCard({ member, viewMode = "digital" }: MembershipCardP
             <div className="flex flex-col items-center">
               <div className="w-[90px] h-[90px] rounded-xl overflow-hidden border border-[#C5A059] shadow-sm bg-black/5 flex items-center justify-center">
                 {member.photo ? (
-                  <img src={member.photo} alt={member.name} className="w-full h-full object-cover" />
+                  <img src={member.photo} alt={member.name} className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                 ) : (
                   <span className="font-display text-[#C5A059] text-3xl">G</span>
                 )}
@@ -132,7 +132,7 @@ export function MembershipCard({ member, viewMode = "digital" }: MembershipCardP
           <div className="relative z-10 flex items-center gap-2 border-b border-[#C5A059]/40 pb-2">
             <img src={logoUrl} alt="Brasão" className="h-7 w-7 drop-shadow-[0_0_4px_rgba(197,160,89,0.3)]" />
             <div>
-              <h2 className="font-display text-xs font-bold text-[#0C1938] leading-tight">União Fraternal Nº 1</h2>
+              <h2 className="font-display text-xs font-bold text-[#0C1938] leading-tight">União Fraternal Nº 120</h2>
               <p className="text-[7px] uppercase tracking-[0.05em] text-muted-foreground">Validação de Credencial Maçônica</p>
             </div>
           </div>
@@ -216,7 +216,7 @@ export function MembershipCard({ member, viewMode = "digital" }: MembershipCardP
                     <img src={logoUrl} alt="Brasão" className="h-9 w-9 drop-shadow-[0_0_4px_rgba(197,160,89,0.3)]" />
                     <div>
                       <h3 className="text-[9px] uppercase tracking-[0.2em] text-[#C5A059] leading-none font-bold">A.R.L.S.</h3>
-                      <h2 className="font-display text-xs font-bold text-[#0C1938] leading-tight">União Fraternal Nº 1</h2>
+                      <h2 className="font-display text-xs font-bold text-[#0C1938] leading-tight">União Fraternal Nº 120</h2>
                       <p className="text-[7px] uppercase tracking-[0.05em] text-muted-foreground">Oriente de Praia Grande</p>
                     </div>
                   </div>
@@ -234,7 +234,7 @@ export function MembershipCard({ member, viewMode = "digital" }: MembershipCardP
                     <div className="absolute inset-0 rounded-xl border border-[#C5A059]/50 -rotate-3 scale-105 pointer-events-none" />
                     <div className="w-28 h-28 rounded-xl overflow-hidden border border-[#C5A059] relative z-10 shadow-sm bg-black/5 flex items-center justify-center">
                       {member.photo ? (
-                        <img src={member.photo} alt={member.name} className="w-full h-full object-cover" />
+                        <img src={member.photo} alt={member.name} className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                       ) : (
                         <span className="font-display text-[#C5A059] text-3xl">G</span>
                       )}
@@ -301,7 +301,7 @@ export function MembershipCard({ member, viewMode = "digital" }: MembershipCardP
                 <div className="relative z-10 flex items-center gap-2.5 border-b border-[#C5A059]/40 pb-2.5">
                   <img src={logoUrl} alt="Brasão" className="h-9 w-9 drop-shadow-[0_0_4px_rgba(197,160,89,0.3)]" />
                   <div>
-                    <h2 className="font-display text-xs font-bold text-[#0C1938] leading-tight">União Fraternal Nº 1</h2>
+                    <h2 className="font-display text-xs font-bold text-[#0C1938] leading-tight">União Fraternal Nº 120</h2>
                     <p className="text-[7px] uppercase tracking-[0.05em] text-[#C5A059]/90 font-bold">Validação Cadastral</p>
                   </div>
                 </div>
@@ -385,7 +385,7 @@ export function MembershipCard({ member, viewMode = "digital" }: MembershipCardP
                   <img src={logoUrl} alt="Brasão" className="h-9 w-9 drop-shadow-[0_0_4px_rgba(197,160,89,0.3)]" />
                   <div>
                     <h3 className="text-[9px] uppercase tracking-[0.2em] text-[#C5A059] leading-none font-bold">A.R.L.S.</h3>
-                    <h2 className="font-display text-xs font-bold text-[#0C1938] leading-tight">União Fraternal Nº 1</h2>
+                    <h2 className="font-display text-xs font-bold text-[#0C1938] leading-tight">União Fraternal Nº 120</h2>
                     <p className="text-[7px] uppercase tracking-[0.05em] text-muted-foreground">Oriente de Praia Grande</p>
                   </div>
                 </div>
@@ -403,7 +403,7 @@ export function MembershipCard({ member, viewMode = "digital" }: MembershipCardP
                   <div className="absolute inset-0 rounded-xl border border-[#C5A059]/50 -rotate-3 scale-105 pointer-events-none" />
                   <div className="w-28 h-28 rounded-xl overflow-hidden border border-[#C5A059] relative z-10 shadow-sm bg-black/5 flex items-center justify-center">
                     {member.photo ? (
-                      <img src={member.photo} alt={member.name} className="w-full h-full object-cover" />
+                      <img src={member.photo} alt={member.name} className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                     ) : (
                       <span className="font-display text-[#C5A059] text-3xl">G</span>
                     )}
@@ -464,7 +464,7 @@ export function MembershipCard({ member, viewMode = "digital" }: MembershipCardP
               <div className="relative z-10 flex items-center gap-2.5 border-b border-[#C5A059]/40 pb-2.5">
                 <img src={logoUrl} alt="Brasão" className="h-9 w-9 drop-shadow-[0_0_4px_rgba(197,160,89,0.3)]" />
                 <div>
-                  <h2 className="font-display text-xs font-bold text-[#0C1938] leading-tight">União Fraternal Nº 1</h2>
+                  <h2 className="font-display text-xs font-bold text-[#0C1938] leading-tight">União Fraternal Nº 120</h2>
                   <p className="text-[7px] uppercase tracking-[0.05em] text-[#C5A059]/90 font-bold">Validação Cadastral</p>
                 </div>
               </div>

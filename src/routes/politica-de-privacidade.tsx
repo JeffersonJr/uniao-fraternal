@@ -6,7 +6,7 @@ import { ShieldCheck, Eye, ScrollText, Cookie } from "lucide-react";
 export const Route = createFileRoute("/politica-de-privacidade")({
   head: () => ({
     meta: [
-      { title: "Política de Privacidade e Cookies — A.R.L.S. União Fraternal Nº 1" },
+      { title: "Política de Privacidade e Cookies — A.R.L.S. União Fraternal Nº 120" },
       { name: "description", content: "Política de Privacidade e Cookies em conformidade com a LGPD (Lei Geral de Proteção de Dados) da União Fraternal." },
     ],
   }),
@@ -57,7 +57,7 @@ function PoliticaPrivacidadePage() {
                   1. Introdução
                 </h3>
                 <p>
-                  A <strong>A.R.L.S. União Fraternal Nº 1</strong>, filiada ao Grande Oriente Maçônico do Brasil (GOMB), está empenhada em proteger a privacidade e os dados pessoais de seus membros, visitantes e interessados.
+                  A <strong>A.R.L.S. União Fraternal Nº 120</strong>, filiada ao Grande Oriente Maçônico do Brasil (GOMB), está empenhada em proteger a privacidade e os dados pessoais de seus membros, visitantes e interessados.
                 </p>
                 <p>
                   Esta Política de Privacidade descreve como coletamos, usamos, armazenamos e protegemos seus dados pessoais de acordo com a <strong>Lei Geral de Proteção de Dados (Lei nº 13.709/2018 - LGPD)</strong>.

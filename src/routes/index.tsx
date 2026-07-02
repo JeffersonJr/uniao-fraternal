@@ -7,9 +7,9 @@ import { About, Pillars, WhatIsMasonry, MasonsJoin, FAQ, Contact } from "@/compo
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "A.R.L.S. União Fraternal Nº 1 — Loja Maçônica em Praia Grande" },
+      { title: "A.R.L.S. União Fraternal Nº 120 — Loja Maçônica em Praia Grande" },
       { name: "description", content: "Loja Maçônica regular fundada em 2024. Conheça a Maçonaria tradicional e descubra se você tem o perfil para iniciar essa jornada." },
-      { property: "og:title", content: "A.R.L.S. União Fraternal Nº 1" },
+      { property: "og:title", content: "A.R.L.S. União Fraternal Nº 120" },
       { property: "og:description", content: "Liberdade, Igualdade e Fraternidade — descubra a Maçonaria tradicional." },
     ],
   }),

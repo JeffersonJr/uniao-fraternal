@@ -10,7 +10,7 @@ import { ArrowLeft, Printer, ShieldCheck, Share2 } from "lucide-react";
 export const Route = createFileRoute("/membros/carteirinha/$id")({
   head: () => ({
     meta: [
-      { title: "Carteirinha Virtual — A.R.L.S. União Fraternal Nº 1" },
+      { title: "Carteirinha Virtual — A.R.L.S. União Fraternal Nº 120" },
       { name: "description", content: "Visualização da carteirinha de membro virtual da União Fraternal." },
     ],
   }),

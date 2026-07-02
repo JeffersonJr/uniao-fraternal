@@ -13,18 +13,6 @@ export interface Member {
 
 export const DEFAULT_MEMBERS: Member[] = [
   {
-    id: "jefferson-campos-beira-junior",
-    name: "Jefferson Campos Beira Junior",
-    role: "Mestre Maçom",
-    cim: "32071",
-    initiationDate: "09 de Agosto de 2020",
-    email: "jefferson@arlsuniaofraternal.com.br",
-    photo: "https://arlsuniaofraternal.com.br/wp-content/uploads/2025/08/cropped-cropped-Jefferson-Campos-1-128x128.webp",
-    status: "regular",
-    joinedAt: "2020-08-09T00:00:00.000Z",
-    office: "Secretário"
-  },
-  {
     id: "gunther-patrick-vargas-hager",
     name: "Gunther Patrick Vargas Hager",
     role: "Mestre Instalado",
@@ -35,6 +23,18 @@ export const DEFAULT_MEMBERS: Member[] = [
     status: "regular",
     joinedAt: new Date().toISOString(),
     office: "Venerável Mestre"
+  },
+  {
+    id: "jefferson-campos-beira-junior",
+    name: "Jefferson Campos Beira Junior",
+    role: "Mestre Maçom",
+    cim: "32071",
+    initiationDate: "09 de Agosto de 2020",
+    email: "jefferson@arlsuniaofraternal.com.br",
+    photo: "https://arlsuniaofraternal.com.br/wp-content/uploads/2025/08/cropped-cropped-Jefferson-Campos-1-128x128.webp",
+    status: "regular",
+    joinedAt: "2020-08-09T00:00:00.000Z",
+    office: "Secretário"
   },
   {
     id: "jose-aldeci-de-souza",
@@ -103,16 +103,27 @@ export const DEFAULT_MEMBERS: Member[] = [
     photo: "https://arlsuniaofraternal.com.br/wp-content/uploads/2025/08/cropped-Rafael-80x80.webp",
     status: "regular",
     joinedAt: new Date().toISOString()
+  },
+  {
+    id: "raphael-sanches",
+    name: "Raphael Sanches",
+    role: "Mestre Maçom",
+    cim: "Não informada",
+    initiationDate: "Não informada",
+    email: "Raphael@arlsuniaofraternal.com.br",
+    photo: "",
+    status: "regular",
+    joinedAt: new Date().toISOString()
   }
 ];
 
 export function getMembers(): Member[] {
   if (typeof window === "undefined") {
-    return DEFAULT_MEMBERS;
+    return DEFAULT_MEMBERS.sort((a, b) => a.name.localeCompare(b.name));
   }
   const stored = localStorage.getItem("uniao_fraternal_members");
   if (!stored) {
-    return DEFAULT_MEMBERS;
+    return DEFAULT_MEMBERS.sort((a, b) => a.name.localeCompare(b.name));
   }
   try {
     const parsed = JSON.parse(stored) as Member[];
@@ -123,9 +134,9 @@ export function getMembers(): Member[] {
         merged.push(m);
       }
     }
-    return merged;
+    return merged.sort((a, b) => a.name.localeCompare(b.name));
   } catch (e) {
-    return DEFAULT_MEMBERS;
+    return DEFAULT_MEMBERS.sort((a, b) => a.name.localeCompare(b.name));
   }
 }
 

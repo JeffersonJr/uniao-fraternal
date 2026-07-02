@@ -20,7 +20,7 @@ export const Route = createFileRoute("/membros/carteirinha/validar")({
   validateSearch: (search) => searchSchema.parse(search),
   head: () => ({
     meta: [
-      { title: "Validador de Carteirinha — A.R.L.S. União Fraternal Nº 1" },
+      { title: "Validador de Carteirinha — A.R.L.S. União Fraternal Nº 120" },
       { name: "description", content: "Validador oficial de identificação maçônica. Verifique a autenticidade de membros." },
     ],
   }),
@@ -226,7 +226,7 @@ function ValidateCardPage() {
                     Identidade Autenticada
                   </h2>
                   <p className="text-xs text-muted-foreground leading-relaxed max-w-md mx-auto mb-8">
-                    Confirmamos que o membro abaixo é regular e está devidamente registrado nos arquivos da A.R.L.S. União Fraternal Nº 1.
+                    Confirmamos que o membro abaixo é regular e está devidamente registrado nos arquivos da A.R.L.S. União Fraternal Nº 120.
                   </p>
 
                   {/* Member Badge info */}
@@ -263,7 +263,7 @@ function ValidateCardPage() {
                   <div className="text-[10px] text-muted-foreground text-center border-t border-border pt-6 space-y-1">
                     <p>Consultado em: <strong>{validationTime}</strong></p>
                     <p className="uppercase tracking-wider text-gold/60 mt-2 font-bold">
-                      A.R.L.S. União Fraternal Nº 1
+                      A.R.L.S. União Fraternal Nº 120
                     </p>
                     <p>Oriente de Praia Grande · SP · Brasil</p>
                     <p className="text-[9px] text-gold/65 font-medium mt-1">Filiada ao Grande Oriente Maçônico do Brasil (GOMB)</p>

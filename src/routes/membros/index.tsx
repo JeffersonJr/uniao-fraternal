@@ -11,7 +11,7 @@ import logoUrl from "@/assets/logo.svg";
 export const Route = createFileRoute("/membros/")({
   head: () => ({
     meta: [
-      { title: "Portal de Membros — A.R.L.S. União Fraternal Nº 1" },
+      { title: "Portal de Membros — A.R.L.S. União Fraternal Nº 120" },
       { name: "description", content: "Portal oficial dos membros da Loja Maçônica União Fraternal. Acesse e emita sua carteirinha virtual." },
     ],
   }),
@@ -100,6 +100,7 @@ function MembersPortal() {
                             src={member.photo}
                             alt={member.name}
                             className="w-full h-full object-cover"
+                            referrerPolicy="no-referrer"
                           />
                         ) : (
                           <span className="font-display text-gold text-2xl">G</span>

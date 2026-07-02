@@ -182,7 +182,7 @@ export function MasonsJoin() {
     }
     setLoading(true);
 
-    const msg = `Olá! Gostaria de me filiar à A.R.L.S. União Fraternal Nº 1.
+    const msg = `Olá! Gostaria de me filiar à A.R.L.S. União Fraternal Nº 120.
 
 Seguem meus dados:
 *Nome:* ${form.nome}
@@ -192,7 +192,7 @@ Seguem meus dados:
 *Loja de Origem/Potência:* ${form.loja}
 *Mensagem:* ${form.mensagem || "Não informada"}`;
 
-    const url = `https://wa.me/5513981326869?text=${encodeURIComponent(msg)}`;
+    const url = `https://wa.me/5511911019192?text=${encodeURIComponent(msg)}`;
 
     setTimeout(() => {
       setLoading(false);
@@ -216,7 +216,7 @@ Seguem meus dados:
           </h2>
           <div className="gold-divider w-32 mx-auto mb-6" />
           <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Se você já é Maçom regular e deseja fazer parte da A.R.L.S. União Fraternal Nº 1,
+            Se você já é Maçom regular e deseja fazer parte da A.R.L.S. União Fraternal Nº 120,
             preencha o formulário abaixo. Nosso secretário entrará em contato para os trâmites
             fraternais de filiação ou regularização.
           </p>
