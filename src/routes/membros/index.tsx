@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { Member, getMembers } from "@/lib/members-db";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Badge } from "@/components/ui/badge";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { Search, UserPlus, CreditCard, ShieldCheck, Mail, Calendar, Hash } from "lucide-react";
@@ -107,9 +108,16 @@ function MembersPortal() {
                         )}
                       </div>
                       <div className="min-w-0">
-                        <h3 className="font-display text-lg text-primary font-semibold truncate">
-                          {member.name}
-                        </h3>
+                        <div className="flex items-center gap-2">
+                          <h3 className="font-display text-lg text-primary font-semibold truncate">
+                            {member.name}
+                          </h3>
+                          {member.isHonorary && (
+                            <Badge variant="secondary" className="text-[8px] uppercase tracking-wider bg-gold/15 text-[#C5A059] border-gold/30 shrink-0 h-4 px-1.5 leading-none">
+                              Honorário
+                            </Badge>
+                          )}
+                        </div>
                         <p className="text-gold uppercase tracking-wider text-[10px] font-medium truncate mt-0.5">
                           {member.role}
                         </p>

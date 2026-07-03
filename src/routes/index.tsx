@@ -23,8 +23,8 @@ function Index() {
       <main>
         <Hero />
         <About />
-        <Pillars />
         <WhatIsMasonry />
+        <Pillars />
         <MasonsJoin />
         <FAQ />
         <Contact />
