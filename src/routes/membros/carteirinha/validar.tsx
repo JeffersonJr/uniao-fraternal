@@ -8,7 +8,7 @@ import { Label } from "@/components/ui/label";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { ShieldCheck, ShieldAlert, ArrowLeft, Calendar, FileText, User, Mail, Search, CheckCircle, Camera, X } from "lucide-react";
-import logoUrl from "@/assets/logo.svg";
+import logoUrl from "@/assets/logo.webp";
 import { Html5Qrcode } from "html5-qrcode";
 import { toast } from "sonner";
 

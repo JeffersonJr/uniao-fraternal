@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import QRCode from "qrcode";
 import { Member } from "@/lib/members-db";
-import logoUrl from "@/assets/logo.svg";
-import gombLogoUrl from "@/assets/gomb-logo.png";
+import logoUrl from "@/assets/logo.webp";
+import gombLogoUrl from "@/assets/gomb-logo.webp";
 import { Badge } from "@/components/ui/badge";
 
 interface MembershipCardProps {

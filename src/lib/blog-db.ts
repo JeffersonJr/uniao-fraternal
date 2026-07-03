@@ -27,7 +27,7 @@ export const blogPosts: BlogPost[] = [
 
       <p>Para nós, enquanto Construtores Sociais, a verdade não é apenas um conceito abstrato que mora nos livros empoeirados. Ela é uma prática diária. Encontrar a verdade significa rasgar os véus da ignorância, do preconceito e do fanatismo que aprisionam a mente humana.</p>
 
-      <h3>A Verdade Relativa e a Verdade Absoluta</h3>
+      <h2>A Verdade Relativa e a Verdade Absoluta</h2>
       
       <div class="my-10 rounded-2xl overflow-hidden shadow-elegant border border-border/50">
         <img src="/images/blog/content_verdade.webp" loading="lazy" decoding="async" alt="Símbolo da busca pela verdade" class="w-full object-cover h-[300px]" />
@@ -39,7 +39,7 @@ export const blogPosts: BlogPost[] = [
 
       <p>Em Loja, o esquadro nos lembra da retidão das ações, e o compasso nos ensina a manter os nossos desejos e paixões dentro de limites justos. Quando usamos essas ferramentas de forma simbólica, estamos, na prática, construindo uma vida pautada na verdade de caráter.</p>
 
-      <h3>O Trabalho Constante</h3>
+      <h2>O Trabalho Constante</h2>
       <p>O Maçom, portanto, deve ser um homem verdadeiro. Sua palavra deve valer mais do que qualquer contrato escrito, e sua conduta deve ser cristalina. A verdadeira resposta para "O que é a Verdade?" reside na coerência entre aquilo que pensamos, aquilo que dizemos e aquilo que efetivamente fazemos em prol da Humanidade.</p>
     `
   },
@@ -58,7 +58,7 @@ export const blogPosts: BlogPost[] = [
 
       <p>Na Maçonaria, o Templo de Salomão não é apenas uma lembrança de uma edificação antiga, mas o modelo do nosso próprio templo interior. Cada Maçom é, simultaneamente, o pedreiro e a própria pedra bruta sendo desbastada para se tornar uma pedra cúbica, perfeita para compor a obra divina.</p>
 
-      <h3>As Duas Colunas</h3>
+      <h2>As Duas Colunas</h2>
       <p>A entrada do Templo era adornada por duas majestosas colunas de bronze. Elas simbolizam, fundamentalmente, a estabilidade e a força. O equilíbrio do universo e das ações humanas depende da união perfeita entre o poder (a força para realizar) e o controle (a estabilidade para permanecer firme).</p>
 
       <div class="my-10 rounded-2xl overflow-hidden shadow-elegant border border-border/50">
@@ -67,7 +67,7 @@ export const blogPosts: BlogPost[] = [
 
       <blockquote>"Não há construção duradoura que não esteja alicerçada em virtudes imaculadas."</blockquote>
 
-      <h3>O Santuário Interior</h3>
+      <h2>O Santuário Interior</h2>
       <p>Assim como o Templo físico possuía pátios, átrios e, finalmente, o Santo dos Santos (o local mais sagrado e íntimo), o ser humano também é construído em camadas. A iniciação maçônica propõe essa jornada de fora para dentro. Somente alcançando o nosso próprio santuário interior, o "Santo dos Santos" de nossa consciência, é que podemos compreender plenamente o nosso propósito.</p>
 
       <p>Estudar o Templo de Salomão é, em suma, estudar a nós mesmos. É entender que a construção do caráter humano exige silêncio, dedicação, ferramentas apropriadas e um projeto inspirado pela Sabedoria Universal.</p>
@@ -88,7 +88,7 @@ export const blogPosts: BlogPost[] = [
 
       <p>De acordo com a tradição maçônica e os relatos bíblicos, Hiram era o Mestre Arquiteto contratado pelo Rei Salomão para coordenar e embelezar a construção do Templo de Jerusalém. Conhecido por sua sabedoria e habilidade como artesão de metais, ele dividiu os obreiros em classes, pagando-lhes de acordo com as suas habilidades e conhecimento.</p>
 
-      <h3>O Valor do Segredo</h3>
+      <h2>O Valor do Segredo</h2>
       <p>A lenda de Hiram narra a inveja daqueles que, não querendo percorrer o árduo caminho do estudo e do trabalho, desejaram obter pela força as palavras e os sinais que lhes garantiriam salários de Mestre. A recusa heroica de Hiram em revelar o segredo confiado a ele, pagando com a própria vida por essa lealdade, é um dos mais fortes exemplos morais de toda a humanidade.</p>
 
       <div class="my-10 rounded-2xl overflow-hidden shadow-elegant border border-border/50">
@@ -97,7 +97,7 @@ export const blogPosts: BlogPost[] = [
 
       <blockquote>"É melhor perder a vida mortal do que ceder os princípios de um caráter inabalável."</blockquote>
 
-      <h3>O Significado Simbólico</h3>
+      <h2>O Significado Simbólico</h2>
       <p>A morte e o renascimento simbólico representados pela lenda de Hiram Abiff não devem ser vistos como meros contos. Eles representam a imortalidade da alma e a eterna vitória da Verdade sobre a ignorância. O Mestre Arquiteto não morreu em vão; seu exemplo permanece vivo na atitude de cada Maçom que escolhe o caminho da retidão mesmo frente a enormes pressões.</p>
 
       <p>Inspirar-se em Hiram Abiff é lembrar, diariamente, que somos arquitetos do nosso próprio destino e que a nossa honra é o único tesouro que não nos pode ser roubado.</p>
@@ -118,7 +118,7 @@ export const blogPosts: BlogPost[] = [
 
       <p>A iniciação maçônica não é uma simples cerimônia de admissão em um clube. É uma representação teatral e psicológica profunda da morte do ego e do renascimento espiritual do indivíduo. É a passagem das "trevas" da ignorância para a "Luz" do conhecimento.</p>
 
-      <h3>As Provas Simbólicas</h3>
+      <h2>As Provas Simbólicas</h2>
       <p>Durante a sua recepção, o candidato é convidado a passar por provas simbólicas ligadas aos elementos primordiais: Terra, Ar, Água e Fogo. Essa jornada mimetiza o processo alquímico de purificação, onde a "Pedra Bruta" (o ser humano em seu estado não lapidado) sofre as fricções e lavagens necessárias para ser limpo dos seus vícios.</p>
 
       <div class="my-10 rounded-2xl overflow-hidden shadow-elegant border border-border/50">
@@ -127,7 +127,7 @@ export const blogPosts: BlogPost[] = [
 
       <blockquote>"Na verdadeira Iniciação, o Templo que se ilumina não é feito de pedra e cimento, mas de carne, mente e espírito."</blockquote>
 
-      <h3>A Câmara de Reflexões</h3>
+      <h2>A Câmara de Reflexões</h2>
       <p>Tudo começa no silêncio e na escuridão da Câmara de Reflexões. Ali, o homem comum confronta a sua finitude e o vazio das ambições materiais. O despojamento dos metais é a primeira grande lição esotérica: não importa a sua riqueza ou posição social do lado de fora, perante as leis do Universo, somos todos iguais e nus.</p>
 
       <p>Compreender o esoterismo maçônico exige dedicação constante. Os símbolos não entregam os seus segredos na primeira leitura. Eles precisam ser contemplados, meditados e vividos. É nessa prática interna que a verdadeira essência da Arte Real repousa.</p>
@@ -148,7 +148,7 @@ export const blogPosts: BlogPost[] = [
 
       <p>Se você procura vantagens financeiras, facilidades políticas ou benefícios materiais, está batendo na porta errada. A Maçonaria não é um grupo de ajuda mútua comercial. A primeira decepção de quem entra por motivos equivocados é rápida e implacável.</p>
 
-      <h3>Trabalho e Estudo Contínuos</h3>
+      <h2>Trabalho e Estudo Contínuos</h2>
       <p>O que a Ordem oferece é o Trabalho. Trabalho constante sobre os próprios defeitos. Oferece as ferramentas necessárias para que você poli a sua moral, domine as suas paixões destrutivas e expanda os seus horizontes intelectuais.</p>
 
       <div class="my-10 rounded-2xl overflow-hidden shadow-elegant border border-border/50">
@@ -157,7 +157,7 @@ export const blogPosts: BlogPost[] = [
 
       <blockquote>"A Maçonaria só faz homens bons tornarem-se ainda melhores. Ela não tem o condão de transformar metais vis em ouro."</blockquote>
 
-      <h3>O Juramento</h3>
+      <h2>O Juramento</h2>
       <p>Ao se tornar Maçom, você será recebido por irmãos que confiarão a você os seus segredos e a sua amizade incondicional, desde que você demonstre ser digno delas. Exigirá que você dedique parte do seu tempo à caridade, ao estudo e às sessões regulares, conciliando tudo isso com a sua vida familiar e profissional – que devem sempre vir em primeiro lugar.</p>
 
       <p>Se você tem um coração voltado para a construção de uma sociedade mais justa e igualitária, e está disposto a trabalhar arduamente para o seu próprio aprimoramento moral, então os nossos passos seguirão juntos na mesma direção.</p>
@@ -178,7 +178,7 @@ export const blogPosts: BlogPost[] = [
 
       <p>É inegável que a tecnologia nos trouxe inúmeros benefícios organizacionais. Contudo, o conhecimento esotérico e moral não pode ser "baixado" de um aplicativo. Ele precisa ser internalizado.</p>
 
-      <h3>O Perigo da Superficialidade</h3>
+      <h2>O Perigo da Superficialidade</h2>
       <p>Muitos Irmãos recém-iniciados, acostumados ao Google e ao acesso rápido, sentem-se frustrados ao perceber que não receberão as respostas sobre os símbolos prontas em um arquivo de PDF. O método maçônico baseia-se na "Instrução por Símbolos", o que significa que o discípulo deve deduzir o ensinamento por si mesmo, guiado discretamente pelos mestres.</p>
 
       <div class="my-10 rounded-2xl overflow-hidden shadow-elegant border border-border/50">
@@ -187,7 +187,7 @@ export const blogPosts: BlogPost[] = [
 
       <blockquote>"A verdadeira sabedoria não se ensina, descobre-se. O papel da Loja não é entregar o conhecimento mastigado, mas ensinar o irmão a como pensar e refletir."</blockquote>
 
-      <h3>Recuperando o Silêncio</h3>
+      <h2>Recuperando o Silêncio</h2>
       <p>Para combater a superficialidade, é vital recuperar o respeito pelo silêncio, especialmente no Grau de Aprendiz. É no silêncio que o cérebro processa, pondera e amadurece as ideias que ouviu em Loja. Nós, como instituição, precisamos modernizar a nossa comunicação e a nossa logística sem perder o rito de passagem lento, cadenciado e intencional que transforma a consciência.</p>
 
       <p>O futuro da Maçonaria dependerá, essencialmente, do quanto nós seremos capazes de manter a pureza dessa educação atemporal sem dar as costas para a realidade do tempo presente.</p>
@@ -210,24 +210,24 @@ export const blogPosts: BlogPost[] = [
 
       <p>É o amadurecimento adquirido pela compreensão dos símbolos e a sua imediata aplicação no sentido real. É o Obreiro gozando dos seus direitos e deveres conscientemente, procurando, ao aplicar os conhecimentos que surgiram da assimilação dos conceitos maçônicos, criar possibilidades aos seus semelhantes de trilhar, como ele, o caminho que leva à perfeição.</p>
 
-      <h3>Um Estado Mental em Ação</h3>
+      <h2>Um Estado Mental em Ação</h2>
       <p>É o estado mental que o tornou Maçom, imprimindo-lhe a moral condicionada nas bases da verdadeira fraternidade — força capaz de unificar a humanidade. Então, a Maçonaria passa a fazer parte desse estado mental, praticando-a o Maçom, no gesto, na palavra, na ação.</p>
 
       <p>O Maçom só o será realmente, quando transmitir aos demais, pelo seu pensamento e a força da palavra, o que possui de mais puro nos conceitos maçônicos. Razão porque ele se distingue dando um sentido diferente às suas atitudes, imprimindo-lhes a tolerância, a compreensão, o respeito, acrescido da justiça e do equilíbrio.</p>
 
       <blockquote>"O Maçom que tem ao seu serviço a aplicação do COMPASSO medindo, delimitando a sua atividade, não pode esquecer a luta perene que fez da nossa Ordem a defensora oculta da Sociedade."</blockquote>
 
-      <h3>O Resgate de Conceitos Milenares</h3>
+      <h2>O Resgate de Conceitos Milenares</h2>
       <p>Esta luta vem de longe. Vem de longa data, recuando-se a muitos séculos, permitindo relembrar que a trilogia que hoje é a base da nossa Instituição foi também há 700 anos a.C., base da doutrina de Zaratustra, filósofo persa que viveu no reinado de Dario. A doutrina determinava ao homem uma tríplice tarefa: <strong>converter o mau (Fraternidade), fazer do seu inimigo um amigo (Igualdade) e instruir o ignorante (Liberdade)</strong>.</p>
 
       <p>É bom lembrar que esta doutrina nunca foi uma religião nacional, porque os seus conceitos deixavam a cada um a liberdade de escolher o Princípio Criador que lhe conviesse, princípio que mantemos e defendemos vigorosamente até os dias de hoje.</p>
 
-      <h3>Fundamentos da Lei Maçônica</h3>
+      <h2>Fundamentos da Lei Maçônica</h2>
       <p>O <strong>Princípio Moral</strong> é a lei fundamental como base de todas as relações humanas, contida nas sentenças – <em>"não faças aos outros o que não queres que te façam"</em> e <em>"o nosso direito termina quando começa o direito do nosso semelhante"</em>. Ao usarmos o instrumento que recebemos para o nosso trabalho na construção do grande Templo da Humanidade, não será difícil aplicarmos este princípio moral.</p>
 
       <p>A Maçonaria necessita de "homens livres e de bons costumes". Da seleção de candidatos, surgirão os líderes que farão da Maçonaria a Instituição capaz de promover as virtudes humanas. A esta responsabilidade o Maçom não pode, nem deve, fugir a escolher, conscientemente o seu novo Irmão, verificando homens de qualidades físicas, intelectuais e morais.</p>
 
-      <h3>Conclusão: O Papel da Liderança Moral</h3>
+      <h2>Conclusão: O Papel da Liderança Moral</h2>
       <p>Depois de iniciado, aprimorados os seus conhecimentos e exaltado ao demonstrar os progressos morais, o Maçom é investido de privilégios e deveres que o tornam apto a desempenhar as suas funções. Para alcançarmos o aprimoramento que nos levará a maiores conhecimentos, teremos de pesquisar, estudar, observar e assimilar as belezas que a filosofia nos reserva.</p>
       
       <p>Sem estes conhecimentos não podemos ser úteis à Sociedade. A Maçonaria precisa de líderes autênticos para a Humanidade, trabalhando incessantemente para a construção do seu grande ideal: o <strong>Templo da Paz e da Fraternidade</strong>.</p>

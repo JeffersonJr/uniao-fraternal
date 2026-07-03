@@ -137,7 +137,7 @@ function BlogPostPage() {
           {/* Social Proof / Conversion at the end of article */}
           <div className="mt-20 py-12 px-8 bg-card border border-border rounded-3xl text-center shadow-elegant relative overflow-hidden">
             <div className="absolute top-0 left-0 w-full h-1 bg-gold-gradient" />
-            <h3 className="font-display text-3xl text-primary mb-4 font-semibold">Gostou da leitura?</h3>
+            <h2 className="font-display text-3xl text-primary mb-4 font-semibold">Gostou da leitura?</h2>
             <p className="text-muted-foreground mb-8 max-w-lg mx-auto text-lg">Se os princípios abordados aqui ecoam com os seus valores pessoais, você pode ter o perfil para a Maçonaria.</p>
             <Button asChild size="lg" className="bg-gold-gradient text-primary hover:opacity-90 shadow-gold text-sm font-semibold tracking-wider">
               <Link to="/triagem">Quero ser um Maçom</Link>
@@ -148,7 +148,7 @@ function BlogPostPage() {
           {recommendations.length > 0 && (
             <div className="mt-24 pt-12 border-t border-border/50">
               <div className="flex items-center justify-between mb-10">
-                <h3 className="font-display text-3xl text-primary font-semibold">Leia Também</h3>
+                <h2 className="font-display text-3xl text-primary font-semibold">Leia Também</h2>
                 <Link to="/blog" className="hidden sm:flex items-center gap-2 text-sm text-gold hover:text-primary transition-colors font-semibold uppercase tracking-widest">
                   Ver todos <ArrowRight className="w-4 h-4" />
                 </Link>
@@ -178,11 +178,11 @@ function BlogPostPage() {
                           {rec.date}
                         </span>
                       </div>
-                      <h4 className="font-display text-xl font-semibold text-primary mb-3 group-hover:text-gold transition-colors leading-tight">
+                      <h3 className="font-display text-xl font-semibold text-primary mb-3 group-hover:text-gold transition-colors leading-tight">
                         <Link to="/blog/$slug" params={{ slug: rec.slug }}>
                           {rec.title}
                         </Link>
-                      </h4>
+                      </h3>
                       <p className="text-muted-foreground text-sm line-clamp-2 mb-6 flex-grow">
                         {rec.excerpt}
                       </p>

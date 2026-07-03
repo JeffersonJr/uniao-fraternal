@@ -7,7 +7,7 @@ import { Badge } from "@/components/ui/badge";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { Search, UserPlus, CreditCard, ShieldCheck, Mail, Calendar, Hash } from "lucide-react";
-import logoUrl from "@/assets/logo.svg";
+import logoUrl from "@/assets/logo.webp";
 
 export const Route = createFileRoute("/membros/")({
   head: () => ({

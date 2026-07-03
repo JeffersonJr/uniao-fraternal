@@ -6,7 +6,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
 import { Compass, Eye, ShieldCheck, BookOpen, Users, Heart, Sparkles, Scale, Handshake } from "lucide-react";
-import gombLogoUrl from "@/assets/gomb-logo.png";
+import gombLogoUrl from "@/assets/gomb-logo.webp";
 
 export function About() {
   return (
@@ -36,7 +36,7 @@ export function About() {
             <img src={gombLogoUrl} alt="Logo GOMB" className="h-16 w-16 object-contain transition-transform group-hover:scale-105" />
             <div>
               <p className="text-[10px] uppercase tracking-[0.2em] text-gold font-bold">Filiada ao</p>
-              <h4 className="font-display text-base text-primary font-semibold leading-tight group-hover:text-gold transition-colors">Grande Oriente Maçônico do Brasil</h4>
+              <h3 className="font-display text-base text-primary font-semibold leading-tight group-hover:text-gold transition-colors">Grande Oriente Maçônico do Brasil</h3>
               <p className="text-xs text-muted-foreground mt-0.5">Potência Maçônica Regular e Legítima</p>
             </div>
           </a>

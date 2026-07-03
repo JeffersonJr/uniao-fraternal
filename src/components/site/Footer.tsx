@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
-import logoUrl from "@/assets/logo.svg";
-import gombLogoUrl from "@/assets/gomb-logo.png";
+import logoUrl from "@/assets/logo.webp";
+import gombLogoUrl from "@/assets/gomb-logo.webp";
 
 export function Footer() {
   return (

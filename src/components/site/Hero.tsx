@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import logoUrl from "@/assets/logo.svg";
+import logoUrl from "@/assets/logo.webp";
 import { Button } from "@/components/ui/button";
 
 export function Hero() {
@@ -18,11 +18,11 @@ export function Hero() {
       </div>
 
       {/* Radial gold glow */}
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full bg-gold/10 blur-3xl animate-shimmer" aria-hidden />
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full bg-gold/10 blur-[100px] animate-shimmer will-change-[opacity]" aria-hidden />
 
       <div className="relative mx-auto max-w-5xl px-6 pt-40 pb-32 text-center">
         <div className="animate-fade-up">
-          <img src={logoUrl} alt="Brasão A.R.L.S. União Fraternal" loading="eager" fetchPriority="high" decoding="sync" className="mx-auto h-32 w-32 mb-8 drop-shadow-[0_0_30px_rgba(212,175,55,0.4)]" />
+          <img src={logoUrl} alt="Brasão A.R.L.S. União Fraternal" loading="eager" fetchPriority="high" decoding="sync" className="mx-auto h-32 w-32 mb-8" style={{ filter: "drop-shadow(0 0 20px rgba(212,175,55,0.3))" }} />
         </div>
 
         <p className="animate-fade-up text-gold uppercase tracking-[0.4em] text-xs mb-6" style={{ animationDelay: "0.1s" }}>
