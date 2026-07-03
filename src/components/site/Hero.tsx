@@ -48,7 +48,7 @@ export function Hero() {
         </p>
 
         <div className="animate-fade-up flex flex-col sm:flex-row gap-4 justify-center" style={{ animationDelay: "0.5s" }}>
-          <Button asChild size="lg" className="bg-gold-gradient text-primary hover:opacity-90 shadow-gold font-medium tracking-wide h-12 px-8">
+          <Button id="tour-jornada" asChild size="lg" className="bg-gold-gradient text-primary hover:opacity-90 shadow-gold font-medium tracking-wide h-12 px-8">
             <Link to="/triagem">Iniciar minha jornada Maçônica</Link>
           </Button>
           <Button asChild size="lg" variant="outline" className="border-gold/40 text-primary-foreground bg-transparent hover:bg-gold/10 hover:text-gold h-12 px-8">

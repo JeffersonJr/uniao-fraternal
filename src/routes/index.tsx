@@ -3,6 +3,7 @@ import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { Hero } from "@/components/site/Hero";
 import { About, Pillars, WhatIsMasonry, MasonsJoin, FAQ, Contact } from "@/components/site/Sections";
+import { UserGuide } from "@/components/site/UserGuide";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -30,6 +31,7 @@ function Index() {
         <Contact />
       </main>
       <Footer />
+      <UserGuide />
     </div>
   );
 }
