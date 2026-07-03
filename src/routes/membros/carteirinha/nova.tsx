@@ -96,7 +96,7 @@ function NewMembershipCard() {
 
           {/* Page Header */}
           <div className="mb-10 animate-fade-up">
-            <p className="text-gold uppercase tracking-[0.3em] text-xs mb-2">Secretaria da Loja</p>
+            <p className="text-primary/70 font-bold uppercase tracking-[0.3em] text-xs mb-2">Secretaria da Loja</p>
             <h1 className="font-display text-4xl md:text-5xl font-light text-primary">
               Criar Carteirinha Virtual
             </h1>

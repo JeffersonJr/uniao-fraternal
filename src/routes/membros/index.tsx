@@ -46,7 +46,7 @@ function MembersPortal() {
           {/* Header section */}
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-12 animate-fade-up">
             <div>
-              <p className="text-gold uppercase tracking-[0.3em] text-xs mb-2">Portal da Loja</p>
+              <p className="text-primary/70 font-bold uppercase tracking-[0.3em] text-xs mb-2">Portal da Loja</p>
               <h1 className="font-display text-4xl md:text-5xl font-light text-primary">
                 Portal de Membros
               </h1>

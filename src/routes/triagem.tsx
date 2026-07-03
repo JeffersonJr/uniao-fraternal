@@ -256,7 +256,7 @@ Seguem meus dados e respostas da triagem:
           <div className="w-20 h-20 rounded-full bg-gold-gradient flex items-center justify-center mx-auto mb-6 shadow-gold">
             <Check className="w-10 h-10 text-primary" />
           </div>
-          <p className="text-gold uppercase tracking-[0.3em] text-xs mb-3">Triagem concluída</p>
+          <p className="text-primary/70 font-bold uppercase tracking-[0.3em] text-xs mb-3">Triagem concluída</p>
           <h1 className={`font-display text-4xl md:text-5xl mb-4 ${status.color}`}>{status.title}</h1>
           <div className="gold-divider w-24 mx-auto mb-6" />
           <p className="text-muted-foreground leading-relaxed mb-8">{status.msg}</p>
@@ -413,7 +413,7 @@ function Shell({ children }: { children: React.ReactNode }) {
       </header>
       <main className="mx-auto max-w-3xl px-6 py-12 md:py-20">
         <div className="text-center mb-10">
-          <p className="text-gold uppercase tracking-[0.3em] text-xs mb-3">Triagem Maçônica</p>
+          <p className="text-primary/70 font-bold uppercase tracking-[0.3em] text-xs mb-3">Triagem Maçônica</p>
           <h1 className="sr-only">Triagem Maçônica</h1>
         </div>
         {children}

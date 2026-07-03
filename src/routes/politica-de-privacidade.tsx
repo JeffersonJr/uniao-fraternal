@@ -22,7 +22,7 @@ function PoliticaPrivacidadePage() {
         <div className="mx-auto max-w-4xl">
           {/* Header */}
           <div className="mb-12 animate-fade-up text-center md:text-left">
-            <p className="text-gold uppercase tracking-[0.3em] text-xs mb-2">Segurança e Privacidade</p>
+            <p className="text-primary/70 font-bold uppercase tracking-[0.3em] text-xs mb-2">Segurança e Privacidade</p>
             <h1 className="font-display text-4xl md:text-5xl font-light text-primary">
               Política de Privacidade e Cookies
             </h1>

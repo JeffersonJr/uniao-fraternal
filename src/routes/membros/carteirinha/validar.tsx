@@ -193,7 +193,7 @@ function ValidateCardPage() {
           {/* Title */}
           <div className="mb-10 text-center animate-fade-up">
             <ShieldCheck className="w-12 h-12 text-gold mx-auto mb-4 drop-shadow-[0_0_8px_rgba(212,175,55,0.4)]" />
-            <p className="text-gold uppercase tracking-[0.3em] text-xs mb-2">Segurança e Autenticação</p>
+            <p className="text-primary/70 font-bold uppercase tracking-[0.3em] text-xs mb-2">Segurança e Autenticação</p>
             <h1 className="font-display text-4xl md:text-5xl font-light text-primary">
               Validador de Credenciais
             </h1>

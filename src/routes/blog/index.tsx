@@ -41,7 +41,7 @@ function BlogIndex() {
       <main className="flex-grow pt-32 pb-20 px-6">
         <div className="mx-auto max-w-6xl">
           <div className="text-center mb-16 animate-fade-up">
-            <p className="text-gold uppercase tracking-[0.3em] text-xs mb-3 font-semibold">Instrução e Conhecimento</p>
+            <p className="text-primary/70 font-bold uppercase tracking-[0.3em] text-xs mb-3">Instrução e Conhecimento</p>
             <h1 className="font-display text-4xl md:text-5xl font-light text-primary mb-6">
               Blog Maçônico
             </h1>

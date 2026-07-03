@@ -13,7 +13,7 @@ export function About() {
     <section id="sobre" className="py-24 md:py-32 bg-background">
       <div className="mx-auto max-w-6xl px-6 grid md:grid-cols-2 gap-16 items-center">
         <div>
-          <p className="text-gold uppercase tracking-[0.3em] text-xs mb-4">Nossa História</p>
+          <p className="text-primary/70 font-bold uppercase tracking-[0.3em] text-xs mb-4">Nossa História</p>
           <h2 className="font-display text-4xl md:text-5xl mb-6">
             Fundada sobre os <span className="italic text-primary">Antigos Landmarks</span>
           </h2>
@@ -123,7 +123,7 @@ export function WhatIsMasonry() {
     <section id="maconaria" className="py-24 md:py-32 bg-secondary">
       <div className="mx-auto max-w-6xl px-6">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <p className="text-gold uppercase tracking-[0.3em] text-xs mb-4">O que é a Maçonaria</p>
+          <p className="text-primary/70 font-bold uppercase tracking-[0.3em] text-xs mb-4">O que é a Maçonaria</p>
           <h2 className="font-display text-4xl md:text-5xl mb-6">
             Uma jornada de <span className="italic">aprimoramento</span>
           </h2>
@@ -210,7 +210,7 @@ Seguem meus dados:
           <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gold-gradient shadow-gold mb-6">
             <Handshake className="w-8 h-8 text-primary" />
           </div>
-          <p className="text-gold uppercase tracking-[0.3em] text-xs mb-4">Aos Irmãos</p>
+          <p className="text-primary/70 font-bold uppercase tracking-[0.3em] text-xs mb-4">Aos Irmãos</p>
           <h2 className="font-display text-4xl md:text-5xl mb-4">
             Maçom regular? <span className="italic text-primary">Junte-se a nós</span>
           </h2>
@@ -333,7 +333,7 @@ export function FAQ() {
     <section id="faq" className="py-24 md:py-32 bg-background">
       <div className="mx-auto max-w-3xl px-6">
         <div className="text-center mb-16">
-          <p className="text-gold uppercase tracking-[0.3em] text-xs mb-4">Perguntas Frequentes</p>
+          <p className="text-primary/70 font-bold uppercase tracking-[0.3em] text-xs mb-4">Perguntas Frequentes</p>
           <h2 className="font-display text-4xl md:text-5xl mb-4">Dúvidas comuns</h2>
           <div className="gold-divider w-32 mx-auto" />
         </div>

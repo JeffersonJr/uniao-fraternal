@@ -36,7 +36,7 @@ export function Footer() {
 
           {/* Column 2: Navigation Shortcuts */}
           <div>
-            <h4 className="text-gold font-display text-base font-semibold mb-4">Navegação</h4>
+            <h2 className="text-gold font-display text-base font-semibold mb-4">Navegação</h2>
             <ul className="space-y-2 text-xs">
               <li>
                 <Link to="/" className="hover:text-gold transition-colors">Página Inicial</Link>
@@ -58,7 +58,7 @@ export function Footer() {
 
           {/* Column 3: Membership & Candidate Portals */}
           <div>
-            <h4 className="text-gold font-display text-base font-semibold mb-4">Portais</h4>
+            <h2 className="text-gold font-display text-base font-semibold mb-4">Portais</h2>
             <ul className="space-y-2 text-xs">
               <li>
                 <Link to="/blog" className="hover:text-gold transition-colors">Blog Maçônico</Link>
@@ -84,7 +84,7 @@ export function Footer() {
           {/* Column 4: Contact & Principles */}
           <div className="space-y-4">
             <div>
-              <h4 className="text-gold font-display text-base font-semibold mb-2">Contato</h4>
+              <h2 className="text-gold font-display text-base font-semibold mb-2">Contato</h2>
               <p className="text-xs leading-normal">
                 R. Costa Rica, 81 — Guilhermina<br />
                 Praia Grande — SP, 11702-190
@@ -94,7 +94,7 @@ export function Footer() {
               </a>
             </div>
             <div className="pt-2 border-t border-primary-foreground/10">
-              <h4 className="text-gold font-display text-xs uppercase tracking-widest mb-1.5">Princípios</h4>
+              <h2 className="text-gold font-display text-xs uppercase tracking-widest mb-1.5">Princípios</h2>
               <p className="text-[10px] uppercase tracking-[0.2em] leading-relaxed">
                 Liberdade · Igualdade · Fraternidade
               </p>
