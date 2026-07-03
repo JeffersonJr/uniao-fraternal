@@ -4,6 +4,7 @@ import { Footer } from "@/components/site/Footer";
 import { Hero } from "@/components/site/Hero";
 import { About, Pillars, WhatIsMasonry, MasonsJoin, FAQ, Contact } from "@/components/site/Sections";
 import { UserGuide } from "@/components/site/UserGuide";
+import { ExitIntentModal } from "@/components/site/ExitIntentModal";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -32,6 +33,7 @@ function Index() {
       </main>
       <Footer />
       <UserGuide />
+      <ExitIntentModal />
     </div>
   );
 }

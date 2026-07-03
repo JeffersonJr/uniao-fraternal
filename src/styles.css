@@ -252,3 +252,67 @@
 }
 
 
+
+/* Custom Driver.js Theme */
+.uf120-tour-theme {
+  border-radius: 16px !important;
+  border: 1px solid var(--color-border) !important;
+  box-shadow: var(--shadow-elegant) !important;
+  background-color: var(--color-card) !important;
+  color: var(--color-foreground) !important;
+  padding: 24px !important;
+  max-width: 340px !important;
+}
+.uf120-tour-theme .driver-popover-title {
+  font-family: var(--font-display) !important;
+  color: var(--color-primary) !important;
+  font-size: 1.4rem !important;
+  margin-bottom: 8px !important;
+  font-weight: 600 !important;
+}
+.uf120-tour-theme .driver-popover-description {
+  font-family: var(--font-sans) !important;
+  color: var(--color-muted-foreground) !important;
+  font-size: 0.95rem !important;
+  line-height: 1.6 !important;
+}
+.uf120-tour-theme .driver-popover-footer {
+  margin-top: 20px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+.uf120-tour-theme .driver-popover-btn-next,
+.uf120-tour-theme .driver-popover-btn-prev {
+  background: var(--color-primary) !important;
+  color: var(--color-primary-foreground) !important;
+  text-shadow: none !important;
+  border: none !important;
+  border-radius: 8px !important;
+  padding: 8px 16px !important;
+  font-weight: 500 !important;
+  font-size: 0.85rem !important;
+  transition: opacity 0.2s !important;
+  cursor: pointer !important;
+}
+.uf120-tour-theme .driver-popover-btn-next:hover,
+.uf120-tour-theme .driver-popover-btn-prev:hover {
+  opacity: 0.9 !important;
+}
+.uf120-tour-theme .driver-popover-btn-disabled {
+  opacity: 0.5 !important;
+  cursor: not-allowed !important;
+  display: none !important;
+}
+.uf120-tour-theme .driver-popover-progress-text {
+  color: var(--color-muted-foreground) !important;
+  font-size: 0.85rem !important;
+  font-weight: 500 !important;
+}
+.uf120-tour-theme .driver-popover-close-btn {
+  color: var(--color-muted-foreground) !important;
+  transition: color 0.2s !important;
+}
+.uf120-tour-theme .driver-popover-close-btn:hover {
+  color: var(--color-foreground) !important;
+}
