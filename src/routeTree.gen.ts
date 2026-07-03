@@ -13,6 +13,8 @@ import { Route as TriagemRouteImport } from './routes/triagem'
 import { Route as PoliticaDePrivacidadeRouteImport } from './routes/politica-de-privacidade'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as MembrosIndexRouteImport } from './routes/membros/index'
+import { Route as BlogIndexRouteImport } from './routes/blog/index'
+import { Route as BlogSlugRouteImport } from './routes/blog/$slug'
 import { Route as MembrosCarteirinhaValidarRouteImport } from './routes/membros/carteirinha/validar'
 import { Route as MembrosCarteirinhaNovaRouteImport } from './routes/membros/carteirinha/nova'
 import { Route as MembrosCarteirinhaIdRouteImport } from './routes/membros/carteirinha/$id'
@@ -37,6 +39,16 @@ const MembrosIndexRoute = MembrosIndexRouteImport.update({
   path: '/membros/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BlogIndexRoute = BlogIndexRouteImport.update({
+  id: '/blog/',
+  path: '/blog/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogSlugRoute = BlogSlugRouteImport.update({
+  id: '/blog/$slug',
+  path: '/blog/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const MembrosCarteirinhaValidarRoute =
   MembrosCarteirinhaValidarRouteImport.update({
     id: '/membros/carteirinha/validar',
@@ -58,6 +70,8 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
   '/triagem': typeof TriagemRoute
+  '/blog/$slug': typeof BlogSlugRoute
+  '/blog/': typeof BlogIndexRoute
   '/membros/': typeof MembrosIndexRoute
   '/membros/carteirinha/$id': typeof MembrosCarteirinhaIdRoute
   '/membros/carteirinha/nova': typeof MembrosCarteirinhaNovaRoute
@@ -67,6 +81,8 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
   '/triagem': typeof TriagemRoute
+  '/blog/$slug': typeof BlogSlugRoute
+  '/blog': typeof BlogIndexRoute
   '/membros': typeof MembrosIndexRoute
   '/membros/carteirinha/$id': typeof MembrosCarteirinhaIdRoute
   '/membros/carteirinha/nova': typeof MembrosCarteirinhaNovaRoute
@@ -77,6 +93,8 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
   '/triagem': typeof TriagemRoute
+  '/blog/$slug': typeof BlogSlugRoute
+  '/blog/': typeof BlogIndexRoute
   '/membros/': typeof MembrosIndexRoute
   '/membros/carteirinha/$id': typeof MembrosCarteirinhaIdRoute
   '/membros/carteirinha/nova': typeof MembrosCarteirinhaNovaRoute
@@ -88,6 +106,8 @@ export interface FileRouteTypes {
     | '/'
     | '/politica-de-privacidade'
     | '/triagem'
+    | '/blog/$slug'
+    | '/blog/'
     | '/membros/'
     | '/membros/carteirinha/$id'
     | '/membros/carteirinha/nova'
@@ -97,6 +117,8 @@ export interface FileRouteTypes {
     | '/'
     | '/politica-de-privacidade'
     | '/triagem'
+    | '/blog/$slug'
+    | '/blog'
     | '/membros'
     | '/membros/carteirinha/$id'
     | '/membros/carteirinha/nova'
@@ -106,6 +128,8 @@ export interface FileRouteTypes {
     | '/'
     | '/politica-de-privacidade'
     | '/triagem'
+    | '/blog/$slug'
+    | '/blog/'
     | '/membros/'
     | '/membros/carteirinha/$id'
     | '/membros/carteirinha/nova'
@@ -116,6 +140,8 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   PoliticaDePrivacidadeRoute: typeof PoliticaDePrivacidadeRoute
   TriagemRoute: typeof TriagemRoute
+  BlogSlugRoute: typeof BlogSlugRoute
+  BlogIndexRoute: typeof BlogIndexRoute
   MembrosIndexRoute: typeof MembrosIndexRoute
   MembrosCarteirinhaIdRoute: typeof MembrosCarteirinhaIdRoute
   MembrosCarteirinhaNovaRoute: typeof MembrosCarteirinhaNovaRoute
@@ -152,6 +178,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof MembrosIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blog/': {
+      id: '/blog/'
+      path: '/blog'
+      fullPath: '/blog/'
+      preLoaderRoute: typeof BlogIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/$slug': {
+      id: '/blog/$slug'
+      path: '/blog/$slug'
+      fullPath: '/blog/$slug'
+      preLoaderRoute: typeof BlogSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/membros/carteirinha/validar': {
       id: '/membros/carteirinha/validar'
       path: '/membros/carteirinha/validar'
@@ -180,6 +220,8 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   PoliticaDePrivacidadeRoute: PoliticaDePrivacidadeRoute,
   TriagemRoute: TriagemRoute,
+  BlogSlugRoute: BlogSlugRoute,
+  BlogIndexRoute: BlogIndexRoute,
   MembrosIndexRoute: MembrosIndexRoute,
   MembrosCarteirinhaIdRoute: MembrosCarteirinhaIdRoute,
   MembrosCarteirinhaNovaRoute: MembrosCarteirinhaNovaRoute,

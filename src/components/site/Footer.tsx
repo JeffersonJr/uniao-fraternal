@@ -61,6 +61,9 @@ export function Footer() {
             <h4 className="text-gold font-display text-base font-semibold mb-4">Portais</h4>
             <ul className="space-y-2 text-xs">
               <li>
+                <Link to="/blog" className="hover:text-gold transition-colors">Blog Maçônico</Link>
+              </li>
+              <li>
                 <Link to="/membros" className="hover:text-gold transition-colors">Portal de Membros</Link>
               </li>
               <li>

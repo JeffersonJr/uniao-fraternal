@@ -75,15 +75,17 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "União Fraternal" },
-      { name: "description", content: "A modern, elegant website that introduces Freemasonry and facilitates prospective member inquiries." },
+      { title: "A.R.L.S. União Fraternal Nº 120 — Loja Maçônica em Praia Grande" },
+      { name: "description", content: "Loja Maçônica regular fundada em 2024 no Oriente de Praia Grande - SP. Conheça a Maçonaria tradicional e descubra se você tem o perfil para iniciar essa jornada." },
+      { name: "keywords", content: "maçonaria, loja maçônica, união fraternal 120, praia grande, GOMB, grande oriente maçônico do brasil, maçonaria praia grande, ser maçom, fraternidade, maçonaria regular" },
       { name: "author", content: "A.R.L.S. União Fraternal Nº 120" },
-      { property: "og:title", content: "União Fraternal" },
-      { property: "og:description", content: "A modern, elegant website that introduces Freemasonry and facilitates prospective member inquiries." },
+      { property: "og:title", content: "A.R.L.S. União Fraternal Nº 120" },
+      { property: "og:description", content: "Loja Maçônica regular em Praia Grande. Liberdade, Igualdade e Fraternidade — descubra a Maçonaria tradicional e nossos pilares." },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:title", content: "União Fraternal" },
-      { name: "twitter:description", content: "A modern, elegant website that introduces Freemasonry and facilitates prospective member inquiries." },
+      { property: "og:site_name", content: "A.R.L.S. União Fraternal Nº 120" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "A.R.L.S. União Fraternal Nº 120" },
+      { name: "twitter:description", content: "Loja Maçônica regular fundada em 2024 no Oriente de Praia Grande - SP. Conheça a Maçonaria tradicional." },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
@@ -103,7 +105,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="pt-BR">
       <head>
         <HeadContent />
       </head>
