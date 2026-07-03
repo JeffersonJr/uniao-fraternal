@@ -39,9 +39,9 @@ export function LgpdConsent() {
             <Cookie className="w-5 h-5 text-gold" />
           </div>
           <div className="space-y-1">
-            <h4 className="font-display text-sm font-semibold text-primary-foreground">
+            <h2 className="font-display text-sm font-semibold text-primary-foreground">
               Aviso de Privacidade & Cookies (LGPD)
-            </h4>
+            </h2>
             <p className="text-xs text-primary-foreground/70 leading-relaxed">
               Este site utiliza cookies essenciais para melhorar sua experiência de navegação,
               segurança e funcionamento, em total conformidade com a Lei Geral de Proteção de Dados (LGPD).

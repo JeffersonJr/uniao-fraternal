@@ -35,7 +35,7 @@ export function About() {
           >
             <img src={gombLogoUrl} alt="Logo GOMB" className="h-16 w-16 object-contain transition-transform group-hover:scale-105" />
             <div>
-              <p className="text-[10px] uppercase tracking-[0.2em] text-gold font-bold">Filiada ao</p>
+              <p className="text-[10px] uppercase tracking-[0.2em] text-primary/70 font-bold">Filiada ao</p>
               <h3 className="font-display text-base text-primary font-semibold leading-tight group-hover:text-gold transition-colors">Grande Oriente Maçônico do Brasil</h3>
               <p className="text-xs text-muted-foreground mt-0.5">Potência Maçônica Regular e Legítima</p>
             </div>
