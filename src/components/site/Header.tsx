@@ -35,6 +35,9 @@ export function Header() {
           <img
             src={logoUrl}
             alt="A.R.L.S. União Fraternal Nº 120"
+            loading="eager"
+            fetchPriority="high"
+            decoding="sync"
             className={`object-contain transition-all duration-300 ${scrolled ? "h-10 w-10" : "h-12 w-12"}`}
           />
           <div className="flex flex-col">

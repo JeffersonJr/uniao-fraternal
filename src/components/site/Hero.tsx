@@ -22,7 +22,7 @@ export function Hero() {
 
       <div className="relative mx-auto max-w-5xl px-6 pt-40 pb-32 text-center">
         <div className="animate-fade-up">
-          <img src={logoUrl} alt="Brasão A.R.L.S. União Fraternal" className="mx-auto h-32 w-32 mb-8 drop-shadow-[0_0_30px_rgba(212,175,55,0.4)]" />
+          <img src={logoUrl} alt="Brasão A.R.L.S. União Fraternal" loading="eager" fetchPriority="high" decoding="sync" className="mx-auto h-32 w-32 mb-8 drop-shadow-[0_0_30px_rgba(212,175,55,0.4)]" />
         </div>
 
         <p className="animate-fade-up text-gold uppercase tracking-[0.4em] text-xs mb-6" style={{ animationDelay: "0.1s" }}>

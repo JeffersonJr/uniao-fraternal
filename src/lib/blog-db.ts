@@ -20,7 +20,7 @@ export const blogPosts: BlogPost[] = [
     author: "Jefferson Campos",
     date: "10 de Abril de 2024",
     readingTime: 6,
-    imageUrl: "/images/blog/cover_verdade.png",
+    imageUrl: "/images/blog/cover_verdade.webp",
     tags: ["Filosofia", "Verdade", "Reflexão"],
     content: `
       <p class="lead">A busca incansável pela verdade é um dos grandes pilares que sustentam o edifício da nossa Ordem. Desde os tempos mais antigos, filósofos, religiosos e cientistas se debruçam sobre essa questão monumental: O que é a verdade?</p>
@@ -30,7 +30,7 @@ export const blogPosts: BlogPost[] = [
       <h3>A Verdade Relativa e a Verdade Absoluta</h3>
       
       <div class="my-10 rounded-2xl overflow-hidden shadow-elegant border border-border/50">
-        <img src="/images/blog/content_verdade.png" alt="Símbolo da busca pela verdade" class="w-full object-cover h-[300px]" />
+        <img src="/images/blog/content_verdade.webp" loading="lazy" decoding="async" alt="Símbolo da busca pela verdade" class="w-full object-cover h-[300px]" />
       </div>
 
       <p>A Maçonaria nos ensina a sermos tolerantes justamente porque reconhecemos que, no plano em que vivemos, a nossa percepção da verdade é limitada. O que hoje consideramos como um fato inquestionável, amanhã pode ser iluminado por uma nova descoberta. Portanto, a verdade que buscamos nas Lojas não é um dogma rígido, mas uma luz que orienta o nosso caminho.</p>
@@ -51,7 +51,7 @@ export const blogPosts: BlogPost[] = [
     author: "Jefferson Campos",
     date: "05 de Abril de 2024",
     readingTime: 7,
-    imageUrl: "/images/blog/cover_templo.png",
+    imageUrl: "/images/blog/cover_templo.webp",
     tags: ["Símbolos", "História", "Templo"],
     content: `
       <p class="lead">Nenhuma estrutura na história humana captura a imaginação maçônica como o Templo do Rei Salomão. Erguido em Jerusalém há quase três milênios, ele transcende a história para se tornar a mais pura alegoria da perfeição moral e espiritual.</p>
@@ -62,7 +62,7 @@ export const blogPosts: BlogPost[] = [
       <p>A entrada do Templo era adornada por duas majestosas colunas de bronze. Elas simbolizam, fundamentalmente, a estabilidade e a força. O equilíbrio do universo e das ações humanas depende da união perfeita entre o poder (a força para realizar) e o controle (a estabilidade para permanecer firme).</p>
 
       <div class="my-10 rounded-2xl overflow-hidden shadow-elegant border border-border/50">
-        <img src="/images/blog/content_templo.png" alt="Esquadro e Compasso sobre a Pedra" class="w-full object-cover h-[300px]" />
+        <img src="/images/blog/content_templo.webp" loading="lazy" decoding="async" alt="Esquadro e Compasso sobre a Pedra" class="w-full object-cover h-[300px]" />
       </div>
 
       <blockquote>"Não há construção duradoura que não esteja alicerçada em virtudes imaculadas."</blockquote>
@@ -81,7 +81,7 @@ export const blogPosts: BlogPost[] = [
     author: "Jefferson Campos",
     date: "28 de Março de 2024",
     readingTime: 5,
-    imageUrl: "/images/blog/cover_hiram.png",
+    imageUrl: "/images/blog/cover_hiram.webp",
     tags: ["História", "Lendas", "Hiram"],
     content: `
       <p class="lead">A figura de Hiram Abiff é a base do Terceiro Grau da Maçonaria. A sua lenda traz consigo os ensinamentos mais profundos sobre lealdade, honra e o verdadeiro sacrifício em nome do dever.</p>
@@ -92,7 +92,7 @@ export const blogPosts: BlogPost[] = [
       <p>A lenda de Hiram narra a inveja daqueles que, não querendo percorrer o árduo caminho do estudo e do trabalho, desejaram obter pela força as palavras e os sinais que lhes garantiriam salários de Mestre. A recusa heroica de Hiram em revelar o segredo confiado a ele, pagando com a própria vida por essa lealdade, é um dos mais fortes exemplos morais de toda a humanidade.</p>
 
       <div class="my-10 rounded-2xl overflow-hidden shadow-elegant border border-border/50">
-        <img src="/images/blog/content_hiram.png" alt="Trolha Dourada e Pedra Cúbica" class="w-full object-cover h-[300px]" />
+        <img src="/images/blog/content_hiram.webp" loading="lazy" decoding="async" alt="Trolha Dourada e Pedra Cúbica" class="w-full object-cover h-[300px]" />
       </div>
 
       <blockquote>"É melhor perder a vida mortal do que ceder os princípios de um caráter inabalável."</blockquote>
@@ -111,7 +111,7 @@ export const blogPosts: BlogPost[] = [
     author: "Jefferson Campos",
     date: "21 de Março de 2024",
     readingTime: 8,
-    imageUrl: "/images/blog/cover_esoterismo.png",
+    imageUrl: "/images/blog/cover_esoterismo.webp",
     tags: ["Esoterismo", "Iniciação", "Mistérios"],
     content: `
       <p class="lead">A Maçonaria é frequentemente descrita como um sistema peculiar de moralidade, velado em alegorias e ilustrado por símbolos. Contudo, há uma dimensão que vai muito além das reuniões fraternais: o Esoterismo Inciático.</p>
@@ -122,7 +122,7 @@ export const blogPosts: BlogPost[] = [
       <p>Durante a sua recepção, o candidato é convidado a passar por provas simbólicas ligadas aos elementos primordiais: Terra, Ar, Água e Fogo. Essa jornada mimetiza o processo alquímico de purificação, onde a "Pedra Bruta" (o ser humano em seu estado não lapidado) sofre as fricções e lavagens necessárias para ser limpo dos seus vícios.</p>
 
       <div class="my-10 rounded-2xl overflow-hidden shadow-elegant border border-border/50">
-        <img src="/images/blog/content_esoterismo.png" alt="A Luz Mística" class="w-full object-cover h-[300px]" />
+        <img src="/images/blog/content_esoterismo.webp" loading="lazy" decoding="async" alt="A Luz Mística" class="w-full object-cover h-[300px]" />
       </div>
 
       <blockquote>"Na verdadeira Iniciação, o Templo que se ilumina não é feito de pedra e cimento, mas de carne, mente e espírito."</blockquote>
@@ -141,7 +141,7 @@ export const blogPosts: BlogPost[] = [
     author: "Jefferson Campos",
     date: "17 de Março de 2024",
     readingTime: 4,
-    imageUrl: "/images/blog/cover_candidatos.png",
+    imageUrl: "/images/blog/cover_candidatos.webp",
     tags: ["Candidatos", "Instrução", "Sociedade"],
     content: `
       <p class="lead">Diariamente, homens de bem sentem um chamado interior que os levam a buscar a Maçonaria. Eles batem às nossas portas atraídos pelo mistério, pela irmandade ou pelo desejo de fazer o bem. Mas o que, de fato, a Maçonaria exige daqueles que a adentram?</p>
@@ -152,7 +152,7 @@ export const blogPosts: BlogPost[] = [
       <p>O que a Ordem oferece é o Trabalho. Trabalho constante sobre os próprios defeitos. Oferece as ferramentas necessárias para que você poli a sua moral, domine as suas paixões destrutivas e expanda os seus horizontes intelectuais.</p>
 
       <div class="my-10 rounded-2xl overflow-hidden shadow-elegant border border-border/50">
-        <img src="/images/blog/content_candidatos.png" alt="Luvas Brancas e a Chave" class="w-full object-cover h-[300px]" />
+        <img src="/images/blog/content_candidatos.webp" loading="lazy" decoding="async" alt="Luvas Brancas e a Chave" class="w-full object-cover h-[300px]" />
       </div>
 
       <blockquote>"A Maçonaria só faz homens bons tornarem-se ainda melhores. Ela não tem o condão de transformar metais vis em ouro."</blockquote>
@@ -171,7 +171,7 @@ export const blogPosts: BlogPost[] = [
     author: "Jefferson Campos",
     date: "14 de Março de 2024",
     readingTime: 6,
-    imageUrl: "/images/blog/cover_educacao.png",
+    imageUrl: "/images/blog/cover_educacao.webp",
     tags: ["Educação", "Atualidade", "Desafios"],
     content: `
       <p class="lead">Vivemos na era da informação instantânea e do pensamento acelerado. Em contraste com isso, a educação maçônica é uma arte baseada no ritmo orgânico, na observação prolongada, na repetição do ritual e no silêncio meditativo. O grande desafio atual é: como educar o Maçom contemporâneo?</p>
@@ -182,7 +182,7 @@ export const blogPosts: BlogPost[] = [
       <p>Muitos Irmãos recém-iniciados, acostumados ao Google e ao acesso rápido, sentem-se frustrados ao perceber que não receberão as respostas sobre os símbolos prontas em um arquivo de PDF. O método maçônico baseia-se na "Instrução por Símbolos", o que significa que o discípulo deve deduzir o ensinamento por si mesmo, guiado discretamente pelos mestres.</p>
 
       <div class="my-10 rounded-2xl overflow-hidden shadow-elegant border border-border/50">
-        <img src="/images/blog/content_educacao.png" alt="A Passagem do Conhecimento" class="w-full object-cover h-[300px]" />
+        <img src="/images/blog/content_educacao.webp" loading="lazy" decoding="async" alt="A Passagem do Conhecimento" class="w-full object-cover h-[300px]" />
       </div>
 
       <blockquote>"A verdadeira sabedoria não se ensina, descobre-se. O papel da Loja não é entregar o conhecimento mastigado, mas ensinar o irmão a como pensar e refletir."</blockquote>
