@@ -9,6 +9,7 @@ import {
 } from "@tanstack/react-router";
 import { type ReactNode } from "react";
 import { LgpdConsent } from "@/components/site/LgpdConsent";
+import { WhatsAppButton } from "@/components/site/WhatsAppButton";
 import { Analytics } from "@vercel/analytics/react";
 
 import appCss from "../styles.css?url";
@@ -155,6 +156,7 @@ function RootComponent() {
     <QueryClientProvider client={queryClient}>
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
       <Outlet />
+      <WhatsAppButton />
       <LgpdConsent />
       <Analytics />
     </QueryClientProvider>
