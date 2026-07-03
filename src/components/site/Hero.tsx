@@ -57,8 +57,12 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Bottom gradient fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-background" />
+      {/* Subtle curved wave divider */}
+      <div className="absolute bottom-0 left-0 right-0 w-full overflow-hidden leading-[0]">
+        <svg viewBox="0 0 1440 100" preserveAspectRatio="none" className="w-full h-12 md:h-20 fill-background block">
+          <path d="M0,100 C480,0 960,0 1440,100 L1440,100 L0,100 Z" />
+        </svg>
+      </div>
     </section>
   );
 }
