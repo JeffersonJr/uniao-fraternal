@@ -133,6 +133,7 @@
 }
 .animate-fade-up {
   animation: fade-up 0.8s ease-out both;
+  will-change: transform, opacity;
 }
 @keyframes shimmer {
   0%, 100% { opacity: 0.6; }
@@ -140,6 +141,7 @@
 }
 .animate-shimmer {
   animation: shimmer 3s ease-in-out infinite;
+  will-change: opacity;
 }
 
 @utility perspective-1000 {
