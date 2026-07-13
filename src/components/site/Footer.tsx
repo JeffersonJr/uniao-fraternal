@@ -63,15 +63,11 @@ export function Footer() {
               <li>
                 <Link to="/blog" className="hover:text-gold transition-colors">Blog Maçônico</Link>
               </li>
-              <li>
-                <Link to="/membros" className="hover:text-gold transition-colors">Portal de Membros</Link>
-              </li>
+
               <li>
                 <Link to="/triagem" className="hover:text-gold transition-colors font-medium text-gold/90">Quero ser um Maçom</Link>
               </li>
-              <li>
-                <Link to="/membros/carteirinha/validar" className="hover:text-gold transition-colors">Validação de Carteirinha</Link>
-              </li>
+
               <li>
                 <Link to="/politica-de-privacidade" className="hover:text-gold transition-colors">Política de Privacidade</Link>
               </li>

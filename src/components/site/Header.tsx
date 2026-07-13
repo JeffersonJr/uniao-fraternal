@@ -53,7 +53,7 @@ export function Header() {
           <a href="/#faq" className="hover:text-gold transition-colors">FAQ</a>
           <a href="/#contato" className="hover:text-gold transition-colors">Contato</a>
           <Link to="/blog" className="hover:text-gold transition-colors font-medium">Blog</Link>
-          <Link to="/membros" className="hover:text-gold transition-colors font-medium">Membros</Link>
+
         </nav>
         
         <div className="flex items-center gap-4">
@@ -83,7 +83,7 @@ export function Header() {
             <a href="/#faq" onClick={() => setIsMenuOpen(false)} className="py-2.5 hover:text-gold transition-colors border-b border-white/5">FAQ</a>
             <a href="/#contato" onClick={() => setIsMenuOpen(false)} className="py-2.5 hover:text-gold transition-colors border-b border-white/5">Contato</a>
             <Link to="/blog" onClick={() => setIsMenuOpen(false)} className="py-2.5 hover:text-gold transition-colors border-b border-white/5 font-semibold">Blog</Link>
-            <Link to="/membros" onClick={() => setIsMenuOpen(false)} className="py-2.5 hover:text-gold transition-colors border-b border-white/5 font-semibold">Membros</Link>
+
             
             <div className="pt-3">
               <Button asChild variant="default" className="w-full bg-gold-gradient text-primary hover:opacity-90 font-medium py-6 rounded-xl">
